@@ -2,1324 +2,1370 @@
 <html lang="ru">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Shukronaning Maktabi 🌟</title>
-<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&family=Baloo+2:wght@400;600;700;800&display=swap" rel="stylesheet">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>Шукрона — 3 класс</title>
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&family=Fredoka+One&display=swap" rel="stylesheet">
 <style>
-  :root {
-    --bg: #FFFDF6;
-    --card: #FFFFFF;
-    --primary: #FF6B35;
-    --secondary: #4ECDC4;
-    --accent: #FFE66D;
-    --purple: #A855F7;
-    --green: #22C55E;
-    --blue: #3B82F6;
-    --red: #EF4444;
-    --text: #1E1B2E;
-    --muted: #6B7280;
-    --border: #E5E7EB;
-    --shadow: 0 4px 24px rgba(0,0,0,0.08);
-  }
-  * { box-sizing: border-box; margin: 0; padding: 0; }
-  body {
-    font-family: 'Nunito', sans-serif;
-    background: var(--bg);
-    color: var(--text);
-    min-height: 100vh;
-  }
+*{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent;}
+:root{
+  --bg:#F0F4FF;
+  --white:#FFFFFF;
+  --blue:#3B82F6;
+  --blue-l:#EFF6FF;
+  --green:#16A34A;
+  --green-l:#F0FDF4;
+  --orange:#EA580C;
+  --orange-l:#FFF7ED;
+  --pink:#DB2777;
+  --pink-l:#FDF2F8;
+  --yellow:#D97706;
+  --yellow-l:#FFFBEB;
+  --purple:#7C3AED;
+  --purple-l:#F5F3FF;
+  --red:#DC2626;
+  --text:#1E293B;
+  --dim:#64748B;
+  --border:#CBD5E1;
+  --sh:0 2px 12px rgba(0,0,0,0.09);
+}
+body{background:var(--bg);font-family:'Nunito',sans-serif;color:var(--text);min-height:100vh;}
 
-  /* HEADER */
-  .header {
-    background: linear-gradient(135deg, #FF6B35 0%, #FF8C42 50%, #FFB347 100%);
-    padding: 20px 24px 28px;
-    text-align: center;
-    position: relative;
-    overflow: hidden;
-  }
-  .header::before {
-    content: '';
-    position: absolute; inset: 0;
-    background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.06'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
-  }
-  .header-name {
-    font-family: 'Baloo 2', cursive;
-    font-size: 2rem;
-    font-weight: 800;
-    color: #fff;
-    text-shadow: 0 2px 8px rgba(0,0,0,0.15);
-    position: relative;
-  }
-  .header-sub {
-    color: rgba(255,255,255,0.9);
-    font-size: 0.95rem;
-    font-weight: 600;
-    margin-top: 4px;
-    position: relative;
-  }
-  .stars-row {
-    display: flex;
-    justify-content: center;
-    gap: 8px;
-    margin-top: 12px;
-    position: relative;
-  }
-  .star-badge {
-    background: rgba(255,255,255,0.25);
-    border-radius: 20px;
-    padding: 4px 12px;
-    color: #fff;
-    font-size: 0.8rem;
-    font-weight: 700;
-    border: 1.5px solid rgba(255,255,255,0.4);
-  }
-  .progress-bar-outer {
-    background: rgba(255,255,255,0.3);
-    border-radius: 10px;
-    height: 12px;
-    margin: 14px 16px 0;
-    overflow: hidden;
-    position: relative;
-  }
-  .progress-bar-inner {
-    height: 100%;
-    background: #fff;
-    border-radius: 10px;
-    transition: width 0.6s ease;
-  }
-  .progress-label {
-    color: rgba(255,255,255,0.9);
-    font-size: 0.8rem;
-    margin-top: 6px;
-    font-weight: 600;
-    position: relative;
-  }
+/* SPLASH */
+#splash{
+  position:fixed;inset:0;z-index:9999;
+  background:linear-gradient(150deg,#EFF6FF 0%,#F0FDF4 60%,#FFF7ED 100%);
+  display:flex;flex-direction:column;align-items:center;justify-content:center;
+  padding:30px 26px;text-align:center;
+  transition:opacity 0.5s;
+}
+.sp-emoji{font-size:52px;margin-bottom:14px;display:block;animation:bob 1.8s ease infinite;}
+@keyframes bob{0%,100%{transform:translateY(0) rotate(-3deg);}50%{transform:translateY(-10px) rotate(3deg);}}
+.sp-name{font-family:'Fredoka One',cursive;font-size:38px;color:var(--blue);margin-bottom:6px;}
+.sp-sub{font-size:15px;font-weight:700;color:var(--orange);margin-bottom:20px;}
+.sp-cards{display:flex;gap:8px;flex-wrap:wrap;justify-content:center;margin-bottom:22px;}
+.sp-card{
+  padding:9px 14px;border-radius:14px;font-size:13px;font-weight:800;
+  display:flex;align-items:center;gap:6px;border:2px solid;
+}
+.sp-card.m{background:#EFF6FF;border-color:#93C5FD;color:var(--blue);}
+.sp-card.r{background:#FFF7ED;border-color:#FCA86A;color:var(--orange);}
+.sp-card.e{background:#F0FDF4;border-color:#86EFAC;color:var(--green);}
+.sp-card.i{background:#FDF2F8;border-color:#F9A8D4;color:var(--pink);}
+.sp-info{
+  font-size:13px;color:var(--dim);line-height:1.65;
+  background:var(--white);border-radius:14px;padding:14px 16px;
+  border:2px solid var(--border);margin-bottom:22px;text-align:left;
+}
+.sp-info b{color:var(--text);}
+.sp-btn{
+  width:100%;max-width:300px;
+  background:linear-gradient(135deg,#3B82F6,#1D4ED8);
+  color:#fff;border:none;border-radius:16px;
+  padding:17px;font-size:17px;font-weight:800;
+  font-family:'Nunito',sans-serif;cursor:pointer;
+  box-shadow:0 6px 22px rgba(59,130,246,0.38);
+  transition:transform 0.15s;
+}
+.sp-btn:active{transform:scale(0.96);}
 
-  /* NAV */
-  .nav {
-    display: flex;
-    overflow-x: auto;
-    gap: 0;
-    background: #fff;
-    border-bottom: 2px solid var(--border);
-    scrollbar-width: none;
-    position: sticky;
-    top: 0;
-    z-index: 100;
-    box-shadow: 0 2px 12px rgba(0,0,0,0.06);
-  }
-  .nav::-webkit-scrollbar { display: none; }
-  .nav-btn {
-    flex: none;
-    padding: 14px 18px;
-    border: none;
-    background: none;
-    font-family: 'Nunito', sans-serif;
-    font-size: 0.85rem;
-    font-weight: 700;
-    color: var(--muted);
-    cursor: pointer;
-    border-bottom: 3px solid transparent;
-    white-space: nowrap;
-    transition: all 0.2s;
-  }
-  .nav-btn.active {
-    color: var(--primary);
-    border-bottom-color: var(--primary);
-    background: #FFF5F2;
-  }
-  .nav-btn:hover:not(.active) {
-    color: var(--text);
-    background: #F9FAFB;
-  }
+/* HEADER */
+.header{
+  background:var(--white);padding:13px 16px;
+  border-bottom:2px solid var(--border);
+  position:sticky;top:0;z-index:100;
+  box-shadow:var(--sh);
+}
+.htop{display:flex;align-items:center;justify-content:space-between;margin-bottom:10px;}
+.hlogo{display:flex;align-items:center;gap:8px;}
+.hlogo-icon{font-size:26px;}
+.hlogo-name{font-family:'Fredoka One',cursive;font-size:20px;color:var(--blue);}
+.hday{
+  font-size:11px;font-weight:800;
+  background:var(--blue-l);color:var(--blue);
+  border:2px solid #BFDBFE;border-radius:10px;padding:4px 11px;
+}
+.prog-row{display:flex;align-items:center;gap:10px;}
+.prog-bg{flex:1;height:11px;background:#E2E8F0;border-radius:6px;overflow:hidden;}
+.prog-fill{
+  height:100%;border-radius:6px;
+  background:linear-gradient(90deg,#3B82F6,#22C55E);
+  transition:width 0.8s cubic-bezier(.34,1.56,.64,1);
+}
+.prog-pct{font-size:12px;font-weight:800;color:var(--blue);min-width:40px;text-align:right;}
 
-  /* MAIN */
-  .main { padding: 20px 16px 40px; max-width: 800px; margin: 0 auto; }
+/* MAIN */
+.main{padding:14px 13px 110px;}
+.stats-row{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-bottom:16px;}
+.sbox{
+  background:var(--white);border:2px solid var(--border);
+  border-radius:14px;padding:11px 6px;text-align:center;
+  box-shadow:var(--sh);
+}
+.sn{font-size:22px;font-weight:900;display:block;}
+.sl{font-size:8px;font-weight:800;color:var(--dim);display:block;margin-top:1px;text-transform:uppercase;letter-spacing:0.5px;}
+.sn.blue{color:var(--blue);}
+.sn.green{color:var(--green);}
+.sn.orange{color:var(--orange);}
+.sn.purple{color:var(--purple);}
 
-  /* DAY SELECTOR */
-  .day-selector {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    margin-bottom: 20px;
-    background: var(--card);
-    border-radius: 16px;
-    padding: 14px 18px;
-    box-shadow: var(--shadow);
-    border: 2px solid var(--border);
-  }
-  .day-arrow {
-    background: var(--bg);
-    border: 2px solid var(--border);
-    border-radius: 10px;
-    width: 38px; height: 38px;
-    display: flex; align-items: center; justify-content: center;
-    cursor: pointer;
-    font-size: 1.1rem;
-    transition: all 0.2s;
-    flex-shrink: 0;
-  }
-  .day-arrow:hover { background: var(--primary); color: #fff; border-color: var(--primary); }
-  .day-info { flex: 1; text-align: center; }
-  .day-num {
-    font-family: 'Baloo 2', cursive;
-    font-size: 1.3rem;
-    font-weight: 800;
-    color: var(--primary);
-  }
-  .day-week { font-size: 0.8rem; color: var(--muted); font-weight: 600; }
-  .day-complete-btn {
-    background: var(--green);
-    color: #fff;
-    border: none;
-    border-radius: 10px;
-    padding: 8px 14px;
-    font-family: 'Nunito', sans-serif;
-    font-size: 0.8rem;
-    font-weight: 800;
-    cursor: pointer;
-    transition: all 0.2s;
-    flex-shrink: 0;
-  }
-  .day-complete-btn:hover { transform: scale(1.05); }
-  .day-complete-btn.done { background: #9CA3AF; }
+.sec-lbl{
+  font-size:11px;font-weight:800;color:var(--dim);
+  text-transform:uppercase;letter-spacing:1.2px;
+  margin-bottom:11px;
+}
 
-  /* SUBJECT CARD */
-  .subject-card {
-    background: var(--card);
-    border-radius: 20px;
-    margin-bottom: 18px;
-    box-shadow: var(--shadow);
-    overflow: hidden;
-    border: 2px solid var(--border);
-  }
-  .subject-header {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    padding: 16px 18px;
-    cursor: pointer;
-    user-select: none;
-  }
-  .subject-icon {
-    width: 46px; height: 46px;
-    border-radius: 14px;
-    display: flex; align-items: center; justify-content: center;
-    font-size: 1.5rem;
-    flex-shrink: 0;
-  }
-  .subject-title {
-    font-family: 'Baloo 2', cursive;
-    font-size: 1.1rem;
-    font-weight: 700;
-  }
-  .subject-sub { font-size: 0.8rem; color: var(--muted); font-weight: 600; margin-top: 2px; }
-  .subject-chevron {
-    margin-left: auto;
-    font-size: 1.2rem;
-    transition: transform 0.3s;
-    color: var(--muted);
-  }
-  .subject-chevron.open { transform: rotate(180deg); }
-  .subject-body {
-    display: none;
-    padding: 0 18px 18px;
-    border-top: 2px dashed var(--border);
-    padding-top: 16px;
-  }
-  .subject-body.open { display: block; }
+/* GRID */
+.days-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:9px;}
+.dc{
+  aspect-ratio:1;border-radius:16px;
+  display:flex;flex-direction:column;
+  align-items:center;justify-content:center;
+  cursor:pointer;border:2.5px solid transparent;
+  transition:transform 0.15s;
+  position:relative;
+}
+.dc:active:not(.locked){transform:scale(0.90);}
+.dc.done{background:var(--green-l);border-color:#22C55E;box-shadow:0 2px 10px rgba(34,197,94,0.2);}
+.dc.active{
+  background:var(--blue-l);border-color:var(--blue);
+  box-shadow:0 2px 14px rgba(59,130,246,0.28);
+  animation:ap 2.2s ease infinite;
+}
+@keyframes ap{0%,100%{box-shadow:0 2px 14px rgba(59,130,246,0.28);}50%{box-shadow:0 2px 22px rgba(59,130,246,0.5);}}
+.dc.locked{background:#F1F5F9;border-color:#E2E8F0;cursor:default;opacity:0.65;}
+.dc-ico{font-size:18px;margin-bottom:1px;}
+.dc-n{font-size:22px;font-weight:900;line-height:1;}
+.dc.done .dc-n{color:#16A34A;}
+.dc.active .dc-n{color:var(--blue);}
+.dc.locked .dc-n{color:#94A3B8;}
+.dc-l{font-size:7px;font-weight:800;letter-spacing:0.8px;text-transform:uppercase;margin-top:2px;}
+.dc.done .dc-l{color:#16A34A;}
+.dc.active .dc-l{color:var(--blue);}
+.dc.locked .dc-l{color:#94A3B8;}
 
-  /* MATH COLORS */
-  .math-icon { background: #FFF3CD; }
-  .math-title { color: #D97706; }
-  /* RUSSIAN */
-  .rus-icon { background: #FEE2E2; }
-  .rus-title { color: var(--red); }
-  /* ENGLISH */
-  .eng-icon { background: #DBEAFE; }
-  .eng-title { color: var(--blue); }
-  /* ART */
-  .art-icon { background: #F3E8FF; }
-  .art-title { color: var(--purple); }
+/* OVERLAY */
+.ov{
+  display:none;position:fixed;inset:0;
+  background:rgba(15,23,42,0.55);z-index:500;
+  align-items:flex-end;justify-content:center;
+  backdrop-filter:blur(5px);
+}
+.ov.open{display:flex;}
+.sheet{
+  background:var(--white);
+  border-radius:26px 26px 0 0;
+  width:100%;max-width:580px;
+  border-top:3px solid var(--border);
+  max-height:93vh;
+  display:flex;flex-direction:column;
+  animation:su 0.3s cubic-bezier(.34,1.56,.64,1);
+  box-shadow:0 -6px 40px rgba(0,0,0,0.14);
+}
+@keyframes su{from{transform:translateY(100%);opacity:0;}to{transform:translateY(0);opacity:1;}}
+.sh-handle{width:36px;height:4px;background:var(--border);border-radius:2px;margin:12px auto 0;flex-shrink:0;}
+.sh-hdr{padding:16px 20px 14px;border-bottom:2px solid var(--border);flex-shrink:0;}
+.sh-badge{
+  display:inline-flex;align-items:center;gap:5px;
+  border-radius:8px;padding:3px 10px;font-size:10px;
+  font-weight:800;letter-spacing:0.5px;margin-bottom:8px;
+}
+.sh-ttl{font-size:18px;font-weight:800;margin-bottom:3px;}
+.sh-sub{font-size:12px;color:var(--dim);}
+.sh-body{overflow-y:auto;flex:1;padding:0 20px 18px;}
+.sh-foot{padding:14px 20px;border-top:2px solid var(--border);flex-shrink:0;background:var(--white);}
 
-  /* LESSON SECTION */
-  .lesson-block {
-    background: #F8FAFC;
-    border-radius: 14px;
-    padding: 14px 16px;
-    margin-bottom: 14px;
-    border-left: 4px solid var(--secondary);
-  }
-  .lesson-block.math-block { border-left-color: #F59E0B; }
-  .lesson-block.rus-block { border-left-color: var(--red); }
-  .lesson-block.eng-block { border-left-color: var(--blue); }
-  .lesson-block.art-block { border-left-color: var(--purple); }
+/* SUBJECT TABS */
+.subj-tabs{
+  display:flex;gap:7px;margin:16px 0 14px;
+  overflow-x:auto;padding-bottom:2px;
+}
+.subj-tabs::-webkit-scrollbar{display:none;}
+.stab{
+  padding:8px 14px;border-radius:20px;font-size:12px;font-weight:800;
+  border:2px solid;cursor:pointer;white-space:nowrap;
+  transition:all 0.2s;flex-shrink:0;
+  font-family:'Nunito',sans-serif;background:var(--white);
+}
+.stab:active{transform:scale(0.94);}
+.stab.m{border-color:#93C5FD;color:var(--blue);}
+.stab.m.sel{background:var(--blue);color:#fff;border-color:var(--blue);}
+.stab.r{border-color:#FCA86A;color:var(--orange);}
+.stab.r.sel{background:var(--orange);color:#fff;border-color:var(--orange);}
+.stab.e{border-color:#86EFAC;color:var(--green);}
+.stab.e.sel{background:var(--green);color:#fff;border-color:var(--green);}
+.stab.i{border-color:#F9A8D4;color:var(--pink);}
+.stab.i.sel{background:var(--pink);color:#fff;border-color:var(--pink);}
 
-  .lesson-title {
-    font-weight: 800;
-    font-size: 0.95rem;
-    margin-bottom: 8px;
-    display: flex;
-    align-items: center;
-    gap: 6px;
-  }
-  .lesson-explain {
-    font-size: 0.88rem;
-    line-height: 1.6;
-    color: #374151;
-    margin-bottom: 10px;
-    background: #fff;
-    border-radius: 10px;
-    padding: 10px 12px;
-    border: 1.5px solid #E5E7EB;
-  }
-  .lesson-explain b { color: var(--primary); }
+/* LESSON BLOCK */
+.lesson-block{display:none;}
+.lesson-block.active{display:block;animation:fi 0.25s ease;}
+@keyframes fi{from{opacity:0;transform:translateY(6px);}to{opacity:1;transform:translateY(0);}}
 
-  /* EXAMPLES */
-  .examples-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
-    gap: 8px;
-    margin-top: 8px;
-  }
-  .example-box {
-    background: #fff;
-    border-radius: 10px;
-    padding: 10px;
-    text-align: center;
-    border: 2px solid #E5E7EB;
-    font-size: 1.1rem;
-    font-weight: 800;
-    cursor: pointer;
-    transition: all 0.2s;
-    position: relative;
-    min-height: 52px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  .example-box:hover { border-color: var(--accent); background: #FFFDE7; }
-  .example-box.answered-correct { background: #DCFCE7; border-color: var(--green); }
-  .example-box.answered-wrong { background: #FEE2E2; border-color: var(--red); animation: shake 0.3s; }
-  .answer-input-row {
-    display: flex; gap: 6px; margin-top: 10px;
-  }
-  .answer-input {
-    flex: 1;
-    border: 2px solid var(--border);
-    border-radius: 10px;
-    padding: 8px 12px;
-    font-family: 'Nunito', sans-serif;
-    font-size: 0.95rem;
-    font-weight: 700;
-    outline: none;
-    transition: border-color 0.2s;
-  }
-  .answer-input:focus { border-color: var(--primary); }
-  .check-btn {
-    background: var(--primary);
-    color: #fff;
-    border: none;
-    border-radius: 10px;
-    padding: 8px 16px;
-    font-family: 'Nunito', sans-serif;
-    font-weight: 800;
-    cursor: pointer;
-    font-size: 0.9rem;
-    transition: all 0.2s;
-  }
-  .check-btn:hover { transform: scale(1.05); }
-  .feedback { font-size: 0.88rem; font-weight: 700; margin-top: 6px; min-height: 20px; }
-  .feedback.correct { color: var(--green); }
-  .feedback.wrong { color: var(--red); }
+.theory-box{
+  border-radius:14px;padding:16px;margin-bottom:14px;
+  border:2px solid;
+}
+.theory-box.blue{background:var(--blue-l);border-color:#93C5FD;}
+.theory-box.orange{background:var(--orange-l);border-color:#FCA86A;}
+.theory-box.green{background:var(--green-l);border-color:#86EFAC;}
+.theory-box.pink{background:var(--pink-l);border-color:#F9A8D4;}
+.theory-box.yellow{background:var(--yellow-l);border-color:#FCD34D;}
+.theory-box.purple{background:var(--purple-l);border-color:#C4B5FD;}
 
-  /* TASKS */
-  .task-list { list-style: none; }
-  .task-item {
-    display: flex;
-    align-items: flex-start;
-    gap: 10px;
-    padding: 10px 0;
-    border-bottom: 1.5px dashed #E5E7EB;
-    font-size: 0.92rem;
-    line-height: 1.5;
-  }
-  .task-item:last-child { border-bottom: none; }
-  .task-check {
-    width: 22px; height: 22px;
-    border: 2px solid var(--border);
-    border-radius: 6px;
-    flex-shrink: 0;
-    cursor: pointer;
-    display: flex; align-items: center; justify-content: center;
-    font-size: 0.8rem;
-    transition: all 0.2s;
-    margin-top: 1px;
-    background: #fff;
-  }
-  .task-check.done { background: var(--green); border-color: var(--green); color: #fff; }
+.th-title{
+  font-size:13px;font-weight:800;margin-bottom:8px;
+  display:flex;align-items:center;gap:6px;
+}
+.th-body{font-size:14px;line-height:1.7;font-weight:600;}
+.th-body b{font-weight:900;}
+.th-example{
+  background:var(--white);border-radius:10px;padding:10px 12px;
+  margin-top:10px;font-size:15px;font-weight:800;
+  border:2px solid var(--border);
+}
 
-  /* DRAWING AREA */
-  .draw-instructions {
-    background: linear-gradient(135deg, #F3E8FF, #EDE9FE);
-    border-radius: 14px;
-    padding: 16px;
-    margin-bottom: 14px;
-    border: 2px solid #DDD6FE;
-  }
-  .draw-instructions h4 { color: var(--purple); font-size: 0.95rem; margin-bottom: 8px; }
-  .draw-instructions ol { padding-left: 18px; font-size: 0.88rem; line-height: 1.8; }
-  .draw-steps {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 8px;
-    margin-top: 8px;
-  }
-  .draw-step {
-    background: #fff;
-    border: 2px solid #DDD6FE;
-    border-radius: 10px;
-    padding: 6px 12px;
-    font-size: 0.82rem;
-    font-weight: 700;
-    color: var(--purple);
-  }
+/* TASKS */
+.tasks-title{
+  font-size:12px;font-weight:800;color:var(--dim);
+  text-transform:uppercase;letter-spacing:1px;
+  margin:16px 0 10px;display:flex;align-items:center;gap:6px;
+}
+.task-item{
+  background:var(--white);border:2px solid var(--border);
+  border-radius:14px;padding:14px 14px;margin-bottom:10px;
+  display:flex;align-items:flex-start;gap:12px;
+  box-shadow:0 1px 4px rgba(0,0,0,0.06);
+  transition:border-color 0.2s,background 0.2s;
+}
+.task-item.done-task{
+  background:var(--green-l);border-color:#86EFAC;
+}
+.task-cb{
+  width:26px;height:26px;min-width:26px;
+  border-radius:50%;border:2.5px solid var(--border);
+  display:flex;align-items:center;justify-content:center;
+  font-size:14px;cursor:pointer;
+  transition:all 0.2s;background:var(--white);
+  margin-top:1px;
+}
+.task-cb.done{background:var(--green);border-color:var(--green);color:#fff;}
+.task-body{flex:1;}
+.task-q{font-size:14px;font-weight:700;line-height:1.5;margin-bottom:4px;}
+.task-hint{font-size:12px;color:var(--dim);font-weight:600;}
+.task-input-row{margin-top:8px;display:none;}
+.task-input-row.show{display:block;}
 
-  /* SCORE */
-  .score-row {
-    display: flex;
-    gap: 10px;
-    margin-bottom: 20px;
-  }
-  .score-card {
-    flex: 1;
-    background: var(--card);
-    border-radius: 14px;
-    padding: 14px;
-    text-align: center;
-    box-shadow: var(--shadow);
-    border: 2px solid var(--border);
-  }
-  .score-num {
-    font-family: 'Baloo 2', cursive;
-    font-size: 1.6rem;
-    font-weight: 800;
-    color: var(--primary);
-  }
-  .score-label { font-size: 0.75rem; color: var(--muted); font-weight: 700; }
+/* MATH EXAMPLES */
+.math-grid{
+  display:grid;grid-template-columns:repeat(2,1fr);
+  gap:10px;margin-bottom:14px;
+}
+.math-card{
+  background:var(--white);border:2.5px solid #93C5FD;
+  border-radius:14px;padding:14px 12px;text-align:center;
+  cursor:pointer;transition:all 0.2s;
+}
+.math-card:active{transform:scale(0.95);}
+.math-card.solved{background:var(--green-l);border-color:#86EFAC;}
+.math-expr{font-size:22px;font-weight:900;color:var(--blue);display:block;margin-bottom:6px;}
+.math-card.solved .math-expr{color:var(--green);}
+.math-inp{
+  width:100%;border:2px solid var(--border);border-radius:8px;
+  padding:7px;font-size:16px;font-weight:800;text-align:center;
+  font-family:'Nunito',sans-serif;background:var(--bg);
+  color:var(--text);
+}
+.math-inp:focus{outline:none;border-color:var(--blue);}
+.math-check{
+  margin-top:6px;font-size:11px;font-weight:700;display:none;
+}
+.math-check.ok{color:var(--green);}
+.math-check.no{color:var(--red);}
 
-  /* CONGRATS */
-  .congrats-banner {
-    background: linear-gradient(135deg, #22C55E, #16A34A);
-    border-radius: 16px;
-    padding: 16px;
-    text-align: center;
-    color: #fff;
-    margin-bottom: 16px;
-    display: none;
-    animation: popIn 0.4s ease;
-  }
-  .congrats-banner.show { display: block; }
-  .congrats-banner h3 { font-size: 1.2rem; font-weight: 800; }
-  .congrats-banner p { font-size: 0.9rem; opacity: 0.9; margin-top: 4px; }
+/* WORD TASK */
+.word-box{
+  background:var(--white);border:2px solid var(--border);
+  border-radius:14px;padding:14px;margin-bottom:10px;
+}
+.word-ru{font-size:20px;font-weight:900;color:var(--orange);margin-bottom:4px;}
+.word-hint{font-size:12px;color:var(--dim);font-weight:600;}
+.word-inp{
+  width:100%;border:2.5px solid var(--border);border-radius:10px;
+  padding:10px;font-size:15px;font-weight:700;
+  font-family:'Nunito',sans-serif;margin-top:8px;
+  background:var(--bg);color:var(--text);
+}
+.word-inp:focus{outline:none;border-color:var(--orange);}
 
-  /* CALENDAR VIEW */
-  .calendar-grid {
-    display: grid;
-    grid-template-columns: repeat(6, 1fr);
-    gap: 6px;
-    margin-bottom: 20px;
-  }
-  @media(max-width: 480px) { .calendar-grid { grid-template-columns: repeat(5, 1fr); } }
-  .cal-day {
-    aspect-ratio: 1;
-    border-radius: 10px;
-    display: flex; align-items: center; justify-content: center;
-    font-weight: 800;
-    font-size: 0.85rem;
-    cursor: pointer;
-    border: 2px solid transparent;
-    transition: all 0.2s;
-    background: #F3F4F6;
-    color: var(--muted);
-  }
-  .cal-day.done-day { background: #DCFCE7; color: var(--green); border-color: #86EFAC; }
-  .cal-day.current-day { background: var(--primary); color: #fff; border-color: var(--primary); }
-  .cal-day:hover:not(.current-day) { border-color: var(--primary); }
+/* DRAWING */
+.draw-canvas{
+  width:100%;border:3px solid var(--border);border-radius:14px;
+  background:#fff;cursor:crosshair;touch-action:none;
+  display:block;
+}
+.draw-tools{
+  display:flex;gap:8px;margin:10px 0;flex-wrap:wrap;
+  align-items:center;
+}
+.color-btn{
+  width:30px;height:30px;border-radius:50%;border:3px solid transparent;
+  cursor:pointer;transition:transform 0.15s;flex-shrink:0;
+}
+.color-btn.active-color{border-color:var(--text);transform:scale(1.2);}
+.draw-tool-btn{
+  padding:7px 13px;border-radius:10px;font-size:12px;font-weight:800;
+  border:2px solid var(--border);background:var(--white);
+  cursor:pointer;font-family:'Nunito',sans-serif;color:var(--text);
+}
+.draw-tool-btn:active{background:var(--bg);}
 
-  /* ANIMATIONS */
-  @keyframes shake {
-    0%,100% { transform: translateX(0); }
-    25% { transform: translateX(-4px); }
-    75% { transform: translateX(4px); }
-  }
-  @keyframes popIn {
-    0% { transform: scale(0.8); opacity: 0; }
-    100% { transform: scale(1); opacity: 1; }
-  }
-  @keyframes starPop {
-    0% { transform: scale(0) rotate(-20deg); }
-    60% { transform: scale(1.3) rotate(5deg); }
-    100% { transform: scale(1) rotate(0); }
-  }
-  .star-pop { animation: starPop 0.4s ease forwards; display: inline-block; }
+/* COMPLETE BTN */
+.comp-btn{
+  width:100%;
+  background:linear-gradient(135deg,#22C55E,#16A34A);
+  color:#fff;border:none;border-radius:16px;
+  padding:17px;font-size:16px;font-weight:800;
+  font-family:'Nunito',sans-serif;cursor:pointer;
+  box-shadow:0 4px 18px rgba(34,197,94,0.3);
+  transition:transform 0.15s;
+}
+.comp-btn:active{transform:scale(0.97);}
+.comp-btn.done-st{
+  background:#F1F5F9;box-shadow:none;
+  color:var(--dim);border:2px solid var(--border);
+}
 
-  /* WORD TASK */
-  .word-row {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 8px;
-    margin: 8px 0;
-  }
-  .word-chip {
-    background: #EFF6FF;
-    border: 2px solid #BFDBFE;
-    border-radius: 8px;
-    padding: 5px 12px;
-    font-size: 0.88rem;
-    font-weight: 700;
-    color: var(--blue);
-    cursor: pointer;
-    transition: all 0.2s;
-  }
-  .word-chip.selected { background: var(--blue); color: #fff; border-color: var(--blue); }
-  .word-chip.correct-word { background: #DCFCE7; color: var(--green); border-color: var(--green); }
-  .word-chip.wrong-word { background: #FEE2E2; color: var(--red); border-color: var(--red); }
+/* TOAST */
+.toast{
+  position:fixed;top:76px;left:50%;transform:translateX(-50%);
+  background:var(--green);color:#fff;
+  border-radius:14px;padding:11px 22px;
+  font-size:14px;font-weight:800;
+  z-index:9999;display:none;
+  box-shadow:0 4px 20px rgba(34,197,94,0.4);
+  white-space:nowrap;
+}
 
-  /* TABS inside subjects */
-  .inner-tabs {
-    display: flex; gap: 6px; margin-bottom: 12px; flex-wrap: wrap;
-  }
-  .inner-tab {
-    padding: 6px 14px;
-    border-radius: 20px;
-    border: 2px solid var(--border);
-    background: #fff;
-    font-family: 'Nunito', sans-serif;
-    font-size: 0.8rem;
-    font-weight: 700;
-    cursor: pointer;
-    transition: all 0.2s;
-    color: var(--muted);
-  }
-  .inner-tab.active-tab { color: #fff; }
-  .inner-tab.math-tab.active-tab { background: #F59E0B; border-color: #F59E0B; }
-  .inner-tab.rus-tab.active-tab { background: var(--red); border-color: var(--red); }
-  .inner-tab.eng-tab.active-tab { background: var(--blue); border-color: var(--blue); }
-  .inner-tab.art-tab.active-tab { background: var(--purple); border-color: var(--purple); }
-  .inner-panel { display: none; }
-  .inner-panel.active-panel { display: block; }
-
-  /* BADGE */
-  .badge {
-    display: inline-flex; align-items: center; gap: 4px;
-    background: var(--accent);
-    border-radius: 20px;
-    padding: 3px 10px;
-    font-size: 0.75rem;
-    font-weight: 800;
-    color: #92400E;
-  }
-
-  /* Section title */
-  .sec-title {
-    font-size: 0.82rem;
-    font-weight: 800;
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-    color: var(--muted);
-    margin: 14px 0 8px;
-  }
-
-  /* Puzzle/fill blank */
-  .fill-blank {
-    display: inline-block;
-    border-bottom: 2px solid var(--primary);
-    min-width: 40px;
-    text-align: center;
-    font-weight: 800;
-    color: var(--primary);
-    margin: 0 4px;
-  }
-
-  /* MOTIVATIONAL */
-  .motto-strip {
-    background: linear-gradient(90deg, #FF6B35, #FFB347);
-    border-radius: 12px;
-    padding: 12px 16px;
-    color: #fff;
-    font-size: 0.9rem;
-    font-weight: 700;
-    text-align: center;
-    margin-bottom: 16px;
-  }
+/* STARS reward */
+.star-pop{
+  position:fixed;top:50%;left:50%;
+  transform:translate(-50%,-50%);
+  font-size:60px;z-index:9999;
+  display:none;pointer-events:none;
+  animation:starPop 0.8s ease forwards;
+}
+@keyframes starPop{
+  0%{opacity:0;transform:translate(-50%,-50%) scale(0);}
+  50%{opacity:1;transform:translate(-50%,-50%) scale(1.3);}
+  100%{opacity:0;transform:translate(-50%,-70%) scale(1);}
+}
 </style>
 </head>
 <body>
 
-<div class="header">
-  <div class="header-name">🌟 Shukrona Bakirova</div>
-  <div class="header-sub">3-sinf • 30 kunlik o'quv dasturi • Moskva 🇷🇺</div>
-  <div class="stars-row">
-    <div class="star-badge">⭐ Yulduzlar: <span id="totalStars">0</span></div>
-    <div class="star-badge">✅ Kunlar: <span id="doneDays">0</span>/30</div>
-    <div class="star-badge">🏆 Daraja: <span id="level">Boshliqchi</span></div>
+<div class="toast" id="toast"></div>
+<div class="star-pop" id="starPop">⭐</div>
+
+<!-- SPLASH -->
+<div id="splash">
+  <span class="sp-emoji">🎒</span>
+  <div class="sp-name">Шукрона Бакирова</div>
+  <div class="sp-sub">3 класс — 30-дневная программа</div>
+  <div class="sp-cards">
+    <div class="sp-card m">📐 Математика</div>
+    <div class="sp-card r">📖 Русский язык</div>
+    <div class="sp-card e">🌍 Английский</div>
+    <div class="sp-card i">🎨 ИЗО</div>
   </div>
-  <div class="progress-bar-outer">
-    <div class="progress-bar-inner" id="mainProgress" style="width:0%"></div>
+  <div class="sp-info">
+    <b>Как работает приложение:</b><br>
+    Каждый день открывается новый урок. Выполняй задания по всем предметам и нажимай «Готово!». Следующий день откроется автоматически. Занимайся каждый день — и через 30 дней ты станешь настоящим отличником! 🌟
   </div>
-  <div class="progress-label" id="progressLabel">0% tugallandi</div>
+  <button class="sp-btn" onclick="startApp()">📚 Начать учиться!</button>
 </div>
 
-<div class="nav">
-  <button class="nav-btn active" onclick="showSection('today')">📅 Bugungi dars</button>
-  <button class="nav-btn" onclick="showSection('calendar')">🗓️ Kalendar</button>
-  <button class="nav-btn" onclick="showSection('math')">🔢 Matematika</button>
-  <button class="nav-btn" onclick="showSection('russian')">📖 Rus tili</button>
-  <button class="nav-btn" onclick="showSection('english')">🇬🇧 Ingliz tili</button>
-  <button class="nav-btn" onclick="showSection('art')">🎨 IZO</button>
-</div>
-
-<div class="main">
-
-<!-- TODAY SECTION -->
-<div id="section-today">
-  <div class="day-selector">
-    <button class="day-arrow" onclick="changeDay(-1)">◀</button>
-    <div class="day-info">
-      <div class="day-num" id="dayNum">📅 1-kun</div>
-      <div class="day-week" id="dayWeek"></div>
+<!-- HEADER -->
+<div class="header" id="appHeader" style="display:none;">
+  <div class="htop">
+    <div class="hlogo">
+      <span class="hlogo-icon">🎒</span>
+      <span class="hlogo-name">Шукрона</span>
     </div>
-    <button class="day-complete-btn" id="completeBtn" onclick="completeDay()">✅ Tugatdim!</button>
-    <button class="day-arrow" onclick="changeDay(1)">▶</button>
+    <div class="hday" id="hDay">День 1</div>
   </div>
-
-  <div class="congrats-banner" id="congratsBanner">
-    <h3>🎉 Ofarin, Shukrona! Barakalla!</h3>
-    <p>Bu kunni muvaffaqiyatli tugatding! ⭐ +4 yulduz oldingiz!</p>
-  </div>
-
-  <div class="motto-strip" id="motivoQuote">💪 Har kun o'qish — kelajakka qadam!</div>
-
-  <div class="score-row">
-    <div class="score-card">
-      <div class="score-num" id="todayStars">0</div>
-      <div class="score-label">⭐ Bugun</div>
-    </div>
-    <div class="score-card">
-      <div class="score-num" id="mathDone">0/8</div>
-      <div class="score-label">🔢 Misollar</div>
-    </div>
-    <div class="score-card">
-      <div class="score-num" id="tasksDone">0</div>
-      <div class="score-label">✅ Vazifalar</div>
-    </div>
-  </div>
-
-  <!-- MATH CARD -->
-  <div class="subject-card" id="mathCard">
-    <div class="subject-header" onclick="toggleSubject('mathBody','mathChevron')">
-      <div class="subject-icon math-icon">🔢</div>
-      <div>
-        <div class="subject-title math-title">Matematika</div>
-        <div class="subject-sub">Tushuntirish + Ko'p misollar</div>
-      </div>
-      <span class="subject-chevron" id="mathChevron">▾</span>
-    </div>
-    <div class="subject-body" id="mathBody">
-      <div class="inner-tabs">
-        <button class="inner-tab math-tab active-tab" onclick="switchInner('math','explain')">📚 Tushuntirish</button>
-        <button class="inner-tab math-tab" onclick="switchInner('math','examples')">🔢 Misollar</button>
-        <button class="inner-tab math-tab" onclick="switchInner('math','tasks')">✏️ Vazifalar</button>
-      </div>
-      <div id="math-explain" class="inner-panel active-panel">
-        <div id="mathExplainContent"></div>
-      </div>
-      <div id="math-examples" class="inner-panel">
-        <div class="sec-title">📝 Misollarni yech — javobni yoz:</div>
-        <div id="mathExamplesContent"></div>
-        <div class="answer-input-row" style="margin-top:14px;">
-          <input class="answer-input" id="mathAnswerInput" type="number" placeholder="Javob yoz...">
-          <button class="check-btn" onclick="checkMathAnswer()">Tekshir ✓</button>
-        </div>
-        <div class="feedback" id="mathFeedback"></div>
-      </div>
-      <div id="math-tasks" class="inner-panel">
-        <div id="mathTasksContent"></div>
-      </div>
-    </div>
-  </div>
-
-  <!-- RUSSIAN CARD -->
-  <div class="subject-card">
-    <div class="subject-header" onclick="toggleSubject('rusBody','rusChevron')">
-      <div class="subject-icon rus-icon">📖</div>
-      <div>
-        <div class="subject-title rus-title">Русский язык</div>
-        <div class="subject-sub">Grammatika + O'qish</div>
-      </div>
-      <span class="subject-chevron" id="rusChevron">▾</span>
-    </div>
-    <div class="subject-body" id="rusBody">
-      <div class="inner-tabs">
-        <button class="inner-tab rus-tab active-tab" onclick="switchInner('rus','explain')">📚 Правило</button>
-        <button class="inner-tab rus-tab" onclick="switchInner('rus','exercise')">✏️ Упражнение</button>
-        <button class="inner-tab rus-tab" onclick="switchInner('rus','read')">📖 Чтение</button>
-      </div>
-      <div id="rus-explain" class="inner-panel active-panel">
-        <div id="rusExplainContent"></div>
-      </div>
-      <div id="rus-exercise" class="inner-panel">
-        <div id="rusExerciseContent"></div>
-      </div>
-      <div id="rus-read" class="inner-panel">
-        <div id="rusReadContent"></div>
-      </div>
-    </div>
-  </div>
-
-  <!-- ENGLISH CARD -->
-  <div class="subject-card">
-    <div class="subject-header" onclick="toggleSubject('engBody','engChevron')">
-      <div class="subject-icon eng-icon">🇬🇧</div>
-      <div>
-        <div class="subject-title eng-title">English</div>
-        <div class="subject-sub">So'zlar + Grammatika</div>
-      </div>
-      <span class="subject-chevron" id="engChevron">▾</span>
-    </div>
-    <div class="subject-body" id="engBody">
-      <div class="inner-tabs">
-        <button class="inner-tab eng-tab active-tab" onclick="switchInner('eng','words')">📝 Words</button>
-        <button class="inner-tab eng-tab" onclick="switchInner('eng','grammar')">📚 Grammar</button>
-        <button class="inner-tab eng-tab" onclick="switchInner('eng','task')">✏️ Task</button>
-      </div>
-      <div id="eng-words" class="inner-panel active-panel">
-        <div id="engWordsContent"></div>
-      </div>
-      <div id="eng-grammar" class="inner-panel">
-        <div id="engGrammarContent"></div>
-      </div>
-      <div id="eng-task" class="inner-panel">
-        <div id="engTaskContent"></div>
-      </div>
-    </div>
-  </div>
-
-  <!-- ART CARD -->
-  <div class="subject-card">
-    <div class="subject-header" onclick="toggleSubject('artBody','artChevron')">
-      <div class="subject-icon art-icon">🎨</div>
-      <div>
-        <div class="subject-title art-title">ИЗО — Rasm darsи</div>
-        <div class="subject-sub">Bosqichma-bosqich chizish</div>
-      </div>
-      <span class="subject-chevron" id="artChevron">▾</span>
-    </div>
-    <div class="subject-body" id="artBody">
-      <div id="artContent"></div>
-    </div>
+  <div class="prog-row">
+    <div class="prog-bg"><div class="prog-fill" id="progFill" style="width:0%"></div></div>
+    <div class="prog-pct" id="progPct">0%</div>
   </div>
 </div>
 
-<!-- CALENDAR SECTION -->
-<div id="section-calendar" style="display:none">
-  <div class="motto-strip">📅 30 kunlik o'quv rejasi — har kunni belgilab boring!</div>
-  <div class="calendar-grid" id="calendarGrid"></div>
-  <div style="display:flex;gap:10px;flex-wrap:wrap;margin-bottom:16px;">
-    <span style="display:flex;align-items:center;gap:5px;font-size:0.82rem;font-weight:700;color:var(--muted)"><span style="width:16px;height:16px;background:#F3F4F6;border-radius:4px;border:2px solid #E5E7EB;display:inline-block"></span>Kelmagan</span>
-    <span style="display:flex;align-items:center;gap:5px;font-size:0.82rem;font-weight:700;color:var(--green)"><span style="width:16px;height:16px;background:#DCFCE7;border-radius:4px;border:2px solid #86EFAC;display:inline-block"></span>Tugatildi</span>
-    <span style="display:flex;align-items:center;gap:5px;font-size:0.82rem;font-weight:700;color:var(--primary)"><span style="width:16px;height:16px;background:var(--primary);border-radius:4px;display:inline-block"></span>Bugun</span>
+<!-- MAIN -->
+<div class="main" id="appMain" style="display:none;">
+  <div class="stats-row">
+    <div class="sbox"><span class="sn blue" id="sDone">0</span><span class="sl">Дней</span></div>
+    <div class="sbox"><span class="sn green" id="sMath">0</span><span class="sl">Примеров</span></div>
+    <div class="sbox"><span class="sn orange" id="sWords">0</span><span class="sl">Слов</span></div>
+    <div class="sbox"><span class="sn purple" id="sStars">0</span><span class="sl">Звёзд</span></div>
   </div>
-  <div class="subject-card" style="padding:16px 18px">
-    <div style="font-family:'Baloo 2',cursive;font-size:1rem;font-weight:800;margin-bottom:10px">📋 30 kunlik mavzular rejasi</div>
-    <div id="scheduleList" style="font-size:0.85rem;line-height:2"></div>
-  </div>
+  <div class="sec-lbl" style="margin-bottom:11px;">🗓 30-дневная программа</div>
+  <div class="days-grid" id="daysGrid"></div>
 </div>
 
-<!-- MATH SECTION -->
-<div id="section-math" style="display:none">
-  <div class="motto-strip">🔢 Matematika — eng sevimli fan!</div>
-  <div class="subject-card" style="padding:18px">
-    <div style="font-family:'Baloo 2',cursive;font-size:1.1rem;font-weight:800;color:#D97706;margin-bottom:14px">🧮 Ko'paytirish jadvali — 2, 3, 4, 5</div>
-    <div id="multiTable"></div>
-    <div style="font-family:'Baloo 2',cursive;font-size:1rem;font-weight:800;color:#D97706;margin:16px 0 10px">➕ Qo'shish va ➖ Ayirish (100 gacha)</div>
-    <div id="addSubExamples"></div>
-    <div style="font-family:'Baloo 2',cursive;font-size:1rem;font-weight:800;color:#D97706;margin:16px 0 10px">🔢 Tartib soni va Miqdor soni</div>
-    <div class="lesson-explain">
-      <b>Tartib soni</b> — nechanchiligi (birinchi, ikkinchi...) <br>
-      <b>Miqdor soni</b> — nechtasi (bir, ikki, uch...) <br>
-      <b>Misol:</b> Saqlangan olma <b>5 ta</b> (miqdor). Shukrona <b>3-chi</b> o'rinda (tartib).
+<!-- MODAL -->
+<div class="ov" id="ov">
+  <div class="sheet">
+    <div class="sh-handle"></div>
+    <div class="sh-hdr">
+      <div class="sh-badge" id="shBadge">📅 ДЕНЬ 1</div>
+      <div class="sh-ttl" id="shTtl">День 1</div>
+      <div class="sh-sub" id="shSub">4 предмета — выполни все задания</div>
     </div>
-    <div style="font-family:'Baloo 2',cursive;font-size:1rem;font-weight:800;color:#D97706;margin:16px 0 10px">📏 Masalalar</div>
-    <div id="wordProblems"></div>
+    <div class="sh-body" id="shBody"></div>
+    <div class="sh-foot">
+      <button class="comp-btn" id="compBtn" onclick="completeDay()">✅ Готово! Следующий день!</button>
+    </div>
   </div>
 </div>
-
-<!-- RUSSIAN SECTION -->
-<div id="section-russian" style="display:none">
-  <div class="motto-strip">📖 Русский язык — учим правила!</div>
-  <div class="subject-card" style="padding:18px">
-    <div style="font-family:'Baloo 2',cursive;font-size:1.1rem;font-weight:800;color:var(--red);margin-bottom:12px">🔤 Asosiy qoidalar — 3-sinf</div>
-    <div id="rulesContent"></div>
-  </div>
-</div>
-
-<!-- ENGLISH SECTION -->
-<div id="section-english" style="display:none">
-  <div class="motto-strip">🇬🇧 English — Let's learn together!</div>
-  <div class="subject-card" style="padding:18px">
-    <div style="font-family:'Baloo 2',cursive;font-size:1.1rem;font-weight:800;color:var(--blue);margin-bottom:12px">📝 Asosiy so'zlar va iboralar</div>
-    <div id="engFullContent"></div>
-  </div>
-</div>
-
-<!-- ART SECTION -->
-<div id="section-art" style="display:none">
-  <div class="motto-strip">🎨 IZO — Rasm chizishni o'rganamiz!</div>
-  <div class="subject-card" style="padding:18px">
-    <div id="artFullContent"></div>
-  </div>
-</div>
-
-</div><!-- /main -->
 
 <script>
-// ============================================================
-// DATA — 30 DAYS CURRICULUM
-// ============================================================
-const quotes = [
-  "💪 Har kun o'qish — kelajakka qadam!",
-  "⭐ Bugun yaxshi o'qisang, ertaga kuchli bo'lasan!",
-  "🌟 Shukrona — sen eng aqlli o'quvchisan!",
-  "📚 Kitob — eng yaxshi do'st!",
-  "🚀 Har bir misol — yangi bilim!",
-  "🎯 Diqqat bilan o'qi — barchasi tushunarli bo'ladi!",
-  "🏆 Sen bugun ham g'olib bo'lasan!",
-  "🌈 O'qish — eng qiziqarli sarguzasht!",
-  "💡 Har savolning javobi bor — faqat o'qi!",
-  "🦋 Bilim — qanotlaring!",
-];
-
-const curriculum = [
-  // Math topic, rus topic, eng topic, art topic
-  ["Sonlar 1-100: o'qish va yozish", "Гласные и согласные буквы", "Alphabet A-F + Colors", "Olma chizish"],
-  ["Qo'shish 1-50 (+)", "Заглавная буква в именах", "Alphabet G-M + Numbers 1-10", "Non chizish"],
-  ["Ayirish 1-50 (-)", "Точка, восклицательный знак", "Numbers 11-20 + Family", "Uy chizish"],
-  ["Qo'shish va ayirish aralash", "Слог и перенос слов", "Animals: dog, cat, bird, fish", "Mushuk chizish"],
-  ["Sonlar 51-100", "Ударение в словах", "Colors: red, blue, green, yellow", "Daraxt chizish"],
-  ["Ko'paytirish: 2-jadval", "Имя существительное", "Body parts: head, eyes, nose", "Inson yuzi chizish"],
-  ["Ko'paytirish: 3-jadval", "Имя прилагательное", "Greetings: Hello, Goodbye", "Chol va kampir chizish"],
-  ["Ko'paytirish: 4-jadval", "Глагол (действие)", "Days of week: Monday-Sunday", "Quyosh chizish"],
-  ["Ko'paytirish: 5-jadval", "Предложение: виды", "Months: January-June", "Oy va yulduzlar chizish"],
-  ["Misollar aralash ×2,3", "Большая буква в начале", "Months: July-December", "Kuz manzarasi chizish"],
-  ["Misollar aralash ×4,5", "Безударные гласные", "Classroom objects: pen, book", "Maktab chizish"],
-  ["Masala: Qo'shish", "Парные согласные", "Food: apple, bread, milk", "Meva chizish"],
-  ["Masala: Ayirish", "Разделительный мягкий знак", "Drinks: water, juice, tea", "Choynak chizish"],
-  ["Masala: Ko'paytirish", "Мягкий знак (ь)", "Transport: bus, car, plane", "Mashina chizish"],
-  ["Geometrik shakllar", "Твёрдый знак (ъ)", "Weather: sunny, rainy, cold", "Bulut va yomg'ir chizish"],
-  ["Perimetr: to'rtburchak", "Имена собственные", "My day: wake up, eat, go", "O'zimni chizish"],
-  ["Yuza: to'rtburchak", "Число имён существительных", "Animals: lion, elephant, giraffe", "Hayvonot bog'i chizish"],
-  ["Tartib va miqdor sonlar", "Падежи: именительный, родительный", "Clothes: shirt, pants, dress", "Ko'ylak chizish"],
-  ["Toq va juft sonlar", "Падеж: дательный, винительный", "My house: room, kitchen, door", "Xona chizish"],
-  ["Solishtrish: > < =", "Падеж: творительный, предложный", "Verbs: run, jump, eat, read", "Sport chizish"],
-  ["3 xonali sonlar 100-200", "Синонимы", "Adjectives: big, small, hot, cold", "Katta va kichik chizish"],
-  ["3 xonali sonlar 200-500", "Антонимы", "Prepositions: in, on, under", "Stol va stul chizish"],
-  ["3 xonali sonlar 500-1000", "Текст и заголовок", "I like / I don't like", "Oshxona chizish"],
-  ["Aralash misollar: ++--", "Составить предложение", "Can/Can't: I can swim", "Qiz chizish"],
-  ["Aralash misollar: ×÷", "Написание письма", "Have got: I have got a cat", "Uy hayvoni chizish"],
-  ["Qisqa ko'paytirish", "Описание природы", "There is / There are", "Tabiat chizish"],
-  ["Masala: Ikki amal", "Пересказ текста", "Present Simple: He plays", "Bog' chizish"],
-  ["Masala: Uch amal", "Стихотворение наизусть", "Present Continuous: playing", "Qo'g'irchoq chizish"],
-  ["Takrorlash: jadvalar", "Сочинение о себе", "Review: all topics", "Portret chizish"],
-  ["Yil bo'yi takrorlash", "Итоговое задание", "Final test + Certificate", "Yakuniy rasm"],
-];
-
-// Math examples per day (10 examples each)
-function getMathExamples(day) {
-  const d = day - 1;
-  const sets = [
-    // day 1: numbers reading
-    [{q:"2 + 3 = ?", a:5}, {q:"4 + 5 = ?", a:9}, {q:"7 + 2 = ?", a:9}, {q:"6 + 4 = ?", a:10},
-     {q:"8 + 1 = ?", a:9}, {q:"3 + 6 = ?", a:9}, {q:"5 + 5 = ?", a:10}, {q:"4 + 3 = ?", a:7},
-     {q:"9 + 1 = ?", a:10}, {q:"2 + 8 = ?", a:10}],
-    // day 2
-    [{q:"10 + 5 = ?", a:15}, {q:"12 + 3 = ?", a:15}, {q:"20 + 4 = ?", a:24}, {q:"15 + 5 = ?", a:20},
-     {q:"11 + 7 = ?", a:18}, {q:"13 + 6 = ?", a:19}, {q:"14 + 4 = ?", a:18}, {q:"16 + 3 = ?", a:19},
-     {q:"18 + 2 = ?", a:20}, {q:"17 + 3 = ?", a:20}],
-    // day 3: subtraction
-    [{q:"10 - 3 = ?", a:7}, {q:"15 - 5 = ?", a:10}, {q:"20 - 8 = ?", a:12}, {q:"18 - 9 = ?", a:9},
-     {q:"25 - 5 = ?", a:20}, {q:"30 - 10 = ?", a:20}, {q:"14 - 6 = ?", a:8}, {q:"22 - 2 = ?", a:20},
-     {q:"17 - 7 = ?", a:10}, {q:"28 - 8 = ?", a:20}],
-    // day 4: mixed
-    [{q:"15 + 5 = ?", a:20}, {q:"20 - 5 = ?", a:15}, {q:"18 + 2 = ?", a:20}, {q:"25 - 10 = ?", a:15},
-     {q:"30 + 5 = ?", a:35}, {q:"40 - 10 = ?", a:30}, {q:"12 + 8 = ?", a:20}, {q:"35 - 15 = ?", a:20},
-     {q:"24 + 6 = ?", a:30}, {q:"45 - 5 = ?", a:40}],
-    // day 5
-    [{q:"51 + 9 = ?", a:60}, {q:"63 + 7 = ?", a:70}, {q:"72 - 2 = ?", a:70}, {q:"85 - 5 = ?", a:80},
-     {q:"55 + 15 = ?", a:70}, {q:"90 - 20 = ?", a:70}, {q:"67 + 3 = ?", a:70}, {q:"74 + 6 = ?", a:80},
-     {q:"88 - 8 = ?", a:80}, {q:"96 - 6 = ?", a:90}],
-    // day 6: ×2
-    [{q:"2 × 1 = ?", a:2}, {q:"2 × 2 = ?", a:4}, {q:"2 × 3 = ?", a:6}, {q:"2 × 4 = ?", a:8},
-     {q:"2 × 5 = ?", a:10}, {q:"2 × 6 = ?", a:12}, {q:"2 × 7 = ?", a:14}, {q:"2 × 8 = ?", a:16},
-     {q:"2 × 9 = ?", a:18}, {q:"2 × 10 = ?", a:20}],
-    // day 7: ×3
-    [{q:"3 × 1 = ?", a:3}, {q:"3 × 2 = ?", a:6}, {q:"3 × 3 = ?", a:9}, {q:"3 × 4 = ?", a:12},
-     {q:"3 × 5 = ?", a:15}, {q:"3 × 6 = ?", a:18}, {q:"3 × 7 = ?", a:21}, {q:"3 × 8 = ?", a:24},
-     {q:"3 × 9 = ?", a:27}, {q:"3 × 10 = ?", a:30}],
-    // day 8: ×4
-    [{q:"4 × 1 = ?", a:4}, {q:"4 × 2 = ?", a:8}, {q:"4 × 3 = ?", a:12}, {q:"4 × 4 = ?", a:16},
-     {q:"4 × 5 = ?", a:20}, {q:"4 × 6 = ?", a:24}, {q:"4 × 7 = ?", a:28}, {q:"4 × 8 = ?", a:32},
-     {q:"4 × 9 = ?", a:36}, {q:"4 × 10 = ?", a:40}],
-    // day 9: ×5
-    [{q:"5 × 1 = ?", a:5}, {q:"5 × 2 = ?", a:10}, {q:"5 × 3 = ?", a:15}, {q:"5 × 4 = ?", a:20},
-     {q:"5 × 5 = ?", a:25}, {q:"5 × 6 = ?", a:30}, {q:"5 × 7 = ?", a:35}, {q:"5 × 8 = ?", a:40},
-     {q:"5 × 9 = ?", a:45}, {q:"5 × 10 = ?", a:50}],
-    // day 10-30: generate dynamically
-  ];
-  if (d < sets.length) return sets[d];
-  // Generate for remaining days
-  const examples = [];
-  for (let i = 0; i < 10; i++) {
-    const type = d % 4;
-    let a, b, q, ans;
-    if (type === 0) { a = Math.floor(Math.random()*40)+1; b = Math.floor(Math.random()*40)+1; q=`${a} + ${b} = ?`; ans=a+b; }
-    else if (type === 1) { a = Math.floor(Math.random()*50)+20; b = Math.floor(Math.random()*20)+1; q=`${a} - ${b} = ?`; ans=a-b; }
-    else if (type === 2) { a = Math.floor(Math.random()*5)+2; b = Math.floor(Math.random()*9)+1; q=`${a} × ${b} = ?`; ans=a*b; }
-    else { a = (Math.floor(Math.random()*9)+1); b = (Math.floor(Math.random()*9)+2); q=`${a*b} ÷ ${b} = ?`; ans=a; }
-    examples.push({q, a:ans});
-  }
-  return examples;
-}
-
-const mathExplains = [
-  "Sonlar 1 dan 100 gacha. <b>O'qish:</b> 1 — bir, 2 — ikki, 10 — o'n, 20 — yigirma, 30 — o'ttiz, 40 — qirq, 50 — ellik, 60 — oltmish, 70 — yetmish, 80 — sakson, 90 — to'qson, 100 — yuz.",
-  "Qo'shish (+): 2 ta guruhni birlashtirish. <b>Misol:</b> 12 + 3 = 15. Birinchi son + ikkinchi son = natija. 🍎🍎 + 🍎🍎🍎 = 5 ta olma",
-  "Ayirish (−): Kattadan kichikni olib tashlash. <b>Misol:</b> 10 − 3 = 7. Agar 10 ta olma bo'lsa va 3 tasini yesang, 7 ta qoladi. 🍎×10 → 🍎×7",
-  "Aralash misollar: + va − bir darsda. <b>Muhim:</b> Chapdan o'ngga hisoblang. <b>Misol:</b> 20 + 5 − 3 = 22",
-  "Sonlar 51-100. Qatorlarda yozing: 51, 52, 53... 60, 61... O'zbekcha: 51 = ellik bir, 75 = yetmish besh, 99 = to'qson to'qqiz",
-  "Ko'paytirish jadvalini <b>×2</b> yod oling. Trick: ×2 = son + son. 3×2: 3+3=6. 7×2: 7+7=14. Barmoqlaringiz bilan sanang!",
-  "Ko'paytirish jadvalini <b>×3</b> yod oling. Trick: 3, 6, 9, 12, 15, 18, 21, 24, 27, 30 — ketma-ket sanang!",
-  "Ko'paytirish jadvalini <b>×4</b> yod oling. Trick: ×4 = ×2 ni ikki marta. 6×4: 6×2=12, 12×2=24!",
-  "Ko'paytirish jadvalini <b>×5</b> yod oling. Trick: ×5 = 0 yoki 5 bilan tugaydi. 3×5=15, 8×5=40. Koʻz yumib ayt!",
-  "Jadvallar ×2 va ×3 aralash. <b>Qoida:</b> Misol ko'rsatilsa, avval uni yeching, keyin tekshiring. Xato bo'lsa — qayta yozing!",
-];
-
-const rusExplains = [
-  ["Гласные: А О У Э И Ы Я Ё Ю Е — 10 та. Согласные: В Н Р С Т... — qolgan barcha harflar. <b>Yodlash:</b> А-О-У-Э-И-Ы qo'shiqchasi!","Упражнение: слова разделить на гласные и согласные\n1. КОТ (К-согл, О-гл, Т-согл)\n2. ДОМ\n3. МАМА\n4. РЫБА\n5. ШКОЛА","Кот Мурзик\n\nКот Мурзик жил в большом доме. Он любил молоко и рыбу. Каждый день он играл с детьми. Дети очень любили Мурзика."],
-  ["Имена, названия городов — с большой буквы! <b>Москва, Шукрона, Россия, Кыргызстан.</b> Начало предложения — всегда с большой буквы!","Запиши правильно:\n1. москва → Москва\n2. шукрона → Шукрона\n3. россия → Россия","Шукрона\n\nШукрона живёт в Москве. Она любит читать книги и рисовать. У неё есть подруга Малика. Вместе они делают уроки."],
-  ["Конец предложения: . ! ?\n<b>Точка</b> — обычное предложение. <b>!</b> — восклицание. <b>?</b> — вопрос.\nМисол: Я иду в школу. Какой красивый цветок! Как тебя зовут?","Поставь знак: . ! ?\n1. Как тебя зовут __\n2. Я люблю маму __\n3. Какой красивый день __\n4. Где живёт кот __\n5. Мы идём в школу __","Весна\n\nНаступила весна. Светит тёплое солнце! Птицы поют песни. Дети вышли гулять. Как хорошо весной!"],
-  ["Слог = часть слова с одной гласной. МА-МА=2 слога, КОТ=1 слог, РЕ-БЁ-НОК=3 слога.\n<b>Qoida:</b> Nechta unli — shuncha bo'g'in!","Раздели на слоги:\n1. КНИГА = КНИ-ГА\n2. ШКОЛА = ШКО-ЛА\n3. СОБАКА = СО-БА-КА\n4. МОЛОКО = МО-ЛО-КО\n5. ДОМ = ДОМ","Собака\n\nУ Вани есть собака Шарик. Шарик любит бегать и играть. Он охраняет дом. Ваня кормит его каждый день."],
-  ["Ударение — самый сильный слог. Ставим знак ' над буквой.\n<b>Примеры:</b> мА-ма, шко-лА, мо-ло-кО, со-ба-кА\nПроизноси слово громко — почувствуй ударный слог!","Поставь ударение:\n1. МАМА\n2. ШКОЛА\n3. КОРОВА\n4. РЕКА\n5. ЯБЛОКО","Яблоко\n\nНа столе лежит яблоко. Оно красное и сладкое. Мама купила яблоки в магазине. Шукрона любит есть яблоки."],
-];
-
-const engWords = [
-  {topic:"Alphabet A-F + Colors", words:[["A - Apple 🍎","B - Ball ⚽","C - Cat 🐱","D - Dog 🐶","E - Egg 🥚","F - Fish 🐟"],["red — qizil","blue — ko'k","green — yashil","yellow — sariq","black — qora","white — oq"]]},
-  {topic:"Alphabet G-M + Numbers", words:[["G - Girl 👧","H - House 🏠","I - Ice cream 🍦","J - Jump 🏃","K - King 👑","L - Lion 🦁","M - Monkey 🐒"],["one — bir","two — ikki","three — uch","four — to'rt","five — besh","six — olti","seven — yetti","eight — sakkiz","nine — to'qqiz","ten — o'n"]]},
-  {topic:"Numbers 11-20 + Family", words:[["eleven — 11","twelve — 12","thirteen — 13","fourteen — 14","fifteen — 15","sixteen — 16","seventeen — 17","eighteen — 18","nineteen — 19","twenty — 20"],["mother — ona","father — ota","sister — opa/singil","brother — aka/uka","grandmother — buvi","grandfather — bobo"]]},
-  {topic:"Animals", words:[["dog — it 🐶","cat — mushuk 🐱","bird — qush 🐦","fish — baliq 🐟","horse — ot 🐴","cow — sigir 🐄"],["big — katta","small — kichik","fast — tez","slow — sekin","hungry — och","happy — xursand"]]},
-  {topic:"Colors revision", words:[["orange — to'q sariq 🟠","pink — pushti 🩷","purple — binafsha 🟣","brown — jigarrang 🟫","grey — kulrang","white — oq ⚪"],["I like red. — Men qizilni yaxshi ko'raman.","What color is it? — Bu qanday rang?","It is blue. — Bu ko'k rang."]]},
-];
-
-const artLessons = [
-  {title:"Olma chizish 🍎", steps:["1. Dumaloq shakl chiz (doira)", "2. Ustiga ikkita dumaloqcha qo'sh", "3. Yuqoridan ingichka shox chiz", "4. Yonidan bitta barg", "5. Qizil rang bilan bo'ya", "6. Yashil barg, jigarrang shox"]},
-  {title:"Non chizish 🍞", steps:["1. Cho'ziq oval chiz", "2. Ustini yarim doira bilan yop", "3. Yon tomonlarni to'ldir", "4. Ustiga chiziqlar chiz (kepak)", "5. Jigarrang-sariq rang bilan bo'ya"]},
-  {title:"Uy chizish 🏠", steps:["1. To'rtburchak — devorlari", "2. Uchburchak tepasi — tom", "3. Eshik — to'rtburchak pastda", "4. Derazalar — 2 ta kvadrat", "5. Truba ustida", "6. Bo'ya: qizil tom, sariq devor"]},
-  {title:"Mushuk chizish 🐱", steps:["1. Katta doira — bosh", "2. Uchburchak quloqlar", "3. Kichik doira — burun", "4. Yonlardan mo'ylov chizig'i", "5. Ko'zlar — ikki doiracha", "6. Tana va dum chiz"]},
-  {title:"Daraxt chizish 🌳", steps:["1. Ingichka to'g'ri chiziq — tanasi", "2. Ustiga katta bulut shakli — shox-shabbalar", "3. Tanadan shoxlar chiq", "4. Yashil bo'ya — yaproklar", "5. Jigarrang — tana", "6. Yerda o't chizig'i"]},
-];
-
-// ============================================================
-// STATE
-// ============================================================
-let currentDay = 1;
-let completedDays = JSON.parse(localStorage.getItem('completedDays') || '[]');
-let totalStars = parseInt(localStorage.getItem('totalStars') || '0');
-let currentExamples = [];
-let currentExIdx = 0;
-let solvedCount = 0;
-
-// ============================================================
-// INIT
-// ============================================================
-window.onload = () => {
-  updateHeader();
-  loadDay(currentDay);
-  buildCalendar();
-  buildStaticSections();
+// ========== STATE ==========
+let S = {
+  day: parseInt(localStorage.getItem('shDay')||'1'),
+  done: JSON.parse(localStorage.getItem('shDone')||'[]'),
+  stars: parseInt(localStorage.getItem('shStars')||'0'),
+  mathSolved: parseInt(localStorage.getItem('shMath')||'0'),
+  wordsDone: parseInt(localStorage.getItem('shWords')||'0'),
 };
+let openDay = null;
+let drawCtx = null, drawing = false, currentColor = '#3B82F6', currentSize = 4;
 
-function saveState() {
-  localStorage.setItem('completedDays', JSON.stringify(completedDays));
-  localStorage.setItem('totalStars', totalStars);
+function save(){
+  localStorage.setItem('shDay', S.day);
+  localStorage.setItem('shDone', JSON.stringify(S.done));
+  localStorage.setItem('shStars', S.stars);
+  localStorage.setItem('shMath', S.mathSolved);
+  localStorage.setItem('shWords', S.wordsDone);
 }
 
-function updateHeader() {
-  document.getElementById('totalStars').textContent = totalStars;
-  document.getElementById('doneDays').textContent = completedDays.length;
-  const pct = Math.round(completedDays.length / 30 * 100);
-  document.getElementById('mainProgress').style.width = pct + '%';
-  document.getElementById('progressLabel').textContent = pct + '% tugallandi';
-  const levels = ['Boshliqchi 🌱','Izlovchi 📚','Bilimdon ⭐','Ustoz 🏆','Olim 🎓'];
-  const li = Math.min(Math.floor(completedDays.length / 6), 4);
-  document.getElementById('level').textContent = levels[li];
+// ========== 30-DAY PLAN ==========
+const DAYS = [
+  // 1
+  {
+    title:'День 1 — Числа и буквы',
+    math:{
+      theory:'Числа от 1 до 100. Сложение и вычитание в пределах 20.',
+      ex:[{q:'7 + 5',a:12},{q:'13 - 4',a:9},{q:'8 + 6',a:14},{q:'15 - 7',a:8},{q:'9 + 3',a:12},{q:'11 - 5',a:6}]
+    },
+    rus:{
+      theory:'Гласные и согласные буквы. Гласные: А,Е,Ё,И,О,У,Ы,Э,Ю,Я.',
+      tasks:['Напиши все гласные буквы: А, Е, Ё, И, О, У, Ы, Э, Ю, Я','Придумай 3 слова на букву «А»','Раздели на слоги: МАМА, ПАПА, ШКОЛА']
+    },
+    eng:{
+      theory:'Алфавит: A B C D E F G H I J K L M N O P Q R S T U V W X Y Z',
+      tasks:['Напиши буквы от A до M','Напиши буквы от N до Z','Выучи: apple 🍎 = яблоко, cat 🐱 = кошка, dog 🐶 = собака']
+    },
+    izo:{
+      theory:'Основные цвета: красный, синий, жёлтый. Из них получаются все другие цвета!',
+      task:'Нарисуй радугу — 7 цветных дуг'
+    }
+  },
+  // 2
+  {
+    title:'День 2 — Сложение',
+    math:{
+      theory:'Сложение двузначных чисел. Сначала складываем единицы, потом десятки.\nПример: 23 + 14 = (20+10) + (3+4) = 37',
+      ex:[{q:'21 + 13',a:34},{q:'32 + 15',a:47},{q:'44 + 23',a:67},{q:'51 + 28',a:79},{q:'36 + 12',a:48},{q:'25 + 34',a:59}]
+    },
+    rus:{
+      theory:'Предложение начинается с большой буквы и заканчивается точкой (.), вопросом (?) или восклицанием (!).',
+      tasks:['Напиши 2 предложения о школе','Поставь нужный знак: Как тебя зовут__  Меня зовут Шукрона__','Сколько слов в предложении: «Я люблю учиться»?']
+    },
+    eng:{
+      theory:'Цвета по-английски: red=красный, blue=синий, green=зелёный, yellow=жёлтый, white=белый, black=чёрный',
+      tasks:['Напиши все 6 цветов по-английски','What colour is the sky? (Какого цвета небо?) Ответ: The sky is blue.','Назови 3 предмета синего цвета по-английски']
+    },
+    izo:{
+      theory:'Прямые и кривые линии. Из линий получаются все фигуры!',
+      task:'Нарисуй домик — используй прямые линии для стен и треугольную крышу'
+    }
+  },
+  // 3
+  {
+    title:'День 3 — Вычитание',
+    math:{
+      theory:'Вычитание двузначных чисел. Вычитаем единицы, потом десятки.\nПример: 47 - 23 = (40-20) + (7-3) = 24',
+      ex:[{q:'45 - 12',a:33},{q:'68 - 25',a:43},{q:'79 - 34',a:45},{q:'56 - 21',a:35},{q:'87 - 43',a:44},{q:'94 - 51',a:43}]
+    },
+    rus:{
+      theory:'Имена собственные пишутся с большой буквы: имена людей, названия городов, стран, рек.',
+      tasks:['Напиши своё имя и фамилию с большой буквы','Запиши: Москва, Россия, Кыргызстан','Придумай 2 имени мальчика и 2 имени девочки']
+    },
+    eng:{
+      theory:'Числа по-английски: 1-one, 2-two, 3-three, 4-four, 5-five, 6-six, 7-seven, 8-eight, 9-nine, 10-ten',
+      tasks:['Напиши числа от 1 до 10 по-английски','Переведи: five + three = ?','Сколько это: seven - two = ?']
+    },
+    izo:{
+      theory:'Симметрия — когда одна половина фигуры зеркально повторяет другую.',
+      task:'Нарисуй бабочку — она симметрична! Оба крыла одинаковые'
+    }
+  },
+  // 4
+  {
+    title:'День 4 — Умножение на 2',
+    math:{
+      theory:'Таблица умножения на 2:\n2×1=2, 2×2=4, 2×3=6, 2×4=8, 2×5=10\n2×6=12, 2×7=14, 2×8=16, 2×9=18, 2×10=20',
+      ex:[{q:'2 × 3',a:6},{q:'2 × 5',a:10},{q:'2 × 7',a:14},{q:'2 × 4',a:8},{q:'2 × 9',a:18},{q:'2 × 6',a:12}]
+    },
+    rus:{
+      theory:'Слог — часть слова, в которой обязательно есть гласная буква.\nМА-МА = 2 слога, ШКО-ЛА = 2 слога, МО-ЛО-КО = 3 слога',
+      tasks:['Раздели на слоги: КНИГА, РУЧКА, ТЕТРАДЬ','Раздели на слоги: МОЛОКО, ЯБЛОКО, ОГУРЕЦ','Сколько слогов в слове ШУКРОНА?']
+    },
+    eng:{
+      theory:'Приветствия: Hello! = Привет!, Good morning! = Доброе утро!, Goodbye! = Пока!, Thank you! = Спасибо!, Yes = Да, No = Нет',
+      tasks:['Выучи 6 слов приветствия','Напиши диалог: — Hello! — Hello! How are you? — I am fine, thank you!','Переведи: Good morning, Shukrona!']
+    },
+    izo:{
+      theory:'Тёплые цвета: красный, оранжевый, жёлтый — они как солнце и огонь.',
+      task:'Нарисуй закат солнца — используй только тёплые цвета'
+    }
+  },
+  // 5
+  {
+    title:'День 5 — Умножение на 3',
+    math:{
+      theory:'Таблица умножения на 3:\n3×1=3, 3×2=6, 3×3=9, 3×4=12, 3×5=15\n3×6=18, 3×7=21, 3×8=24, 3×9=27, 3×10=30',
+      ex:[{q:'3 × 2',a:6},{q:'3 × 4',a:12},{q:'3 × 6',a:18},{q:'3 × 3',a:9},{q:'3 × 8',a:24},{q:'3 × 7',a:21}]
+    },
+    rus:{
+      theory:'Ударение — один слог в слове произносится сильнее других. Он называется ударным.\nМо́ре, шко́ла, учи́тель',
+      tasks:['Поставь ударение: СОБАКА, КОШКА, МЕДВЕДЬ','Поставь ударение: МОЛОКО, ДЕРЕВО, ОБЛАКО','Придумай 3 слова с ударением на первом слоге']
+    },
+    eng:{
+      theory:'Животные: cat=кошка, dog=собака, bird=птица, fish=рыба, rabbit=кролик, bear=медведь, lion=лев',
+      tasks:['Напиши 7 животных по-английски','Нарисуй 3 животных и подпиши по-английски','Переведи: I have a cat and a dog.']
+    },
+    izo:{
+      theory:'Холодные цвета: синий, голубой, фиолетовый, зелёный — они как вода и лёд.',
+      task:'Нарисуй зимний лес — используй холодные цвета'
+    }
+  },
+  // 6
+  {
+    title:'День 6 — Умножение на 4',
+    math:{
+      theory:'Таблица умножения на 4:\n4×1=4, 4×2=8, 4×3=12, 4×4=16, 4×5=20\n4×6=24, 4×7=28, 4×8=32, 4×9=36, 4×10=40',
+      ex:[{q:'4 × 2',a:8},{q:'4 × 5',a:20},{q:'4 × 3',a:12},{q:'4 × 7',a:28},{q:'4 × 6',a:24},{q:'4 × 9',a:36}]
+    },
+    rus:{
+      theory:'Безударные гласные в корне слова нужно проверять. Подбери проверочное слово!\nВода — вóды, леса — лес',
+      tasks:['Подбери проверочное слово: сосна, трава, река','Вставь пропущенные буквы: в_да, тр_ва, з_мля','Напиши 3 слова с безударной гласной и проверочные слова']
+    },
+    eng:{
+      theory:'Фрукты и овощи: apple=яблоко, banana=банан, orange=апельсин, carrot=морковь, tomato=помидор',
+      tasks:['Напиши 5 слов — фрукты и овощи','Переведи: I like apples and bananas.','Нарисуй яблоко и подпиши «apple»']
+    },
+    izo:{
+      theory:'Геометрические фигуры в рисунке: круг, квадрат, треугольник, прямоугольник.',
+      task:'Нарисуй робота — используй только геометрические фигуры'
+    }
+  },
+  // 7
+  {
+    title:'День 7 — Умножение на 5',
+    math:{
+      theory:'Таблица умножения на 5:\n5×1=5, 5×2=10, 5×3=15, 5×4=20, 5×5=25\n5×6=30, 5×7=35, 5×8=40, 5×9=45, 5×10=50\nВсе результаты заканчиваются на 0 или 5!',
+      ex:[{q:'5 × 2',a:10},{q:'5 × 4',a:20},{q:'5 × 6',a:30},{q:'5 × 3',a:15},{q:'5 × 8',a:40},{q:'5 × 9',a:45}]
+    },
+    rus:{
+      theory:'Согласные звонкие и глухие. Звонкие: Б В Г Д Ж З Й Л М Н Р. Глухие: П Ф К Т Ш С Х Ч Щ Ц',
+      tasks:['Запиши все звонкие согласные','Запиши все глухие согласные','Найди пары: Б-П, В-Ф, Г-К, Д-Т, Ж-Ш, З-С']
+    },
+    eng:{
+      theory:'Части тела: head=голова, eyes=глаза, nose=нос, mouth=рот, ears=уши, hands=руки, legs=ноги',
+      tasks:['Напиши 7 частей тела по-английски','Переведи: I have two eyes and one nose.','Show me your hands! (Покажи руки!)']
+    },
+    izo:{
+      theory:'Натюрморт — рисунок неживых предметов: фрукты, цветы, посуда.',
+      task:'Нарисуй натюрморт: ваза с цветами и 2 яблока рядом'
+    }
+  },
+  // 8
+  {
+    title:'День 8 — Умножение на 6',
+    math:{
+      theory:'Таблица умножения на 6:\n6×1=6, 6×2=12, 6×3=18, 6×4=24, 6×5=30\n6×6=36, 6×7=42, 6×8=48, 6×9=54, 6×10=60',
+      ex:[{q:'6 × 2',a:12},{q:'6 × 4',a:24},{q:'6 × 3',a:18},{q:'6 × 6',a:36},{q:'6 × 7',a:42},{q:'6 × 9',a:54}]
+    },
+    rus:{
+      theory:'Парные согласные на конце слова. На конце слова звонкие заменяются глухими:\nГриб — гри[п], дуб — ду[п], нож — но[ш]',
+      tasks:['Напиши и проверь: дуб, зуб, гриб, нож, уж','Подбери проверочное слово: хлеб, обед, мороз','Вставь букву: гри___, ду___, нo___']
+    },
+    eng:{
+      theory:'Цвета + предметы: red ball=красный мяч, blue pen=синяя ручка, green tree=зелёное дерево',
+      tasks:['Опиши 3 предмета: цвет + предмет по-английски','Переведи: a yellow cat, a black dog, a white bird','Напиши 5 прилагательных цвета']
+    },
+    izo:{
+      theory:'Пейзаж — рисунок природы: небо, деревья, горы, река.',
+      task:'Нарисуй летний пейзаж: небо, солнце, зелёные деревья, цветы'
+    }
+  },
+  // 9
+  {
+    title:'День 9 — Умножение на 7',
+    math:{
+      theory:'Таблица умножения на 7:\n7×1=7, 7×2=14, 7×3=21, 7×4=28, 7×5=35\n7×6=42, 7×7=49, 7×8=56, 7×9=63, 7×10=70',
+      ex:[{q:'7 × 2',a:14},{q:'7 × 3',a:21},{q:'7 × 5',a:35},{q:'7 × 6',a:42},{q:'7 × 7',a:49},{q:'7 × 9',a:63}]
+    },
+    rus:{
+      theory:'Мягкий знак (Ь) смягчает согласный звук перед ним:\nкон — конь, угол — уголь, мел — мель',
+      tasks:['Напиши слова с мягким знаком: конь, день, путь, мать','Добавь мягкий знак если нужно: кон_, пут_, угол_, мел_','Придумай 4 слова с мягким знаком']
+    },
+    eng:{
+      theory:'Глаголы действия: run=бежать, jump=прыгать, swim=плавать, fly=летать, eat=есть, sleep=спать',
+      tasks:['Выучи 6 глаголов','Составь предложения: I can run. I can jump.','Переведи: Birds can fly. Fish can swim.']
+    },
+    izo:{
+      theory:'Портрет — рисунок лица человека. Глаза посередине лица, нос ниже, рот ещё ниже.',
+      task:'Нарисуй портрет своего друга или себя'
+    }
+  },
+  // 10
+  {
+    title:'День 10 — Умножение на 8',
+    math:{
+      theory:'Таблица умножения на 8:\n8×1=8, 8×2=16, 8×3=24, 8×4=32, 8×5=40\n8×6=48, 8×7=56, 8×8=64, 8×9=72, 8×10=80',
+      ex:[{q:'8 × 2',a:16},{q:'8 × 4',a:32},{q:'8 × 5',a:40},{q:'8 × 6',a:48},{q:'8 × 8',a:64},{q:'8 × 9',a:72}]
+    },
+    rus:{
+      theory:'Разделительный мягкий знак (Ь) пишется перед е, ё, и, ю, я:\nсемья, вьюга, листья, платье',
+      tasks:['Напиши слова: семья, ручьи, листья, перья','Вставь Ь: сем_я, плат_е, руч_и','Придумай 2 слова с разделительным Ь']
+    },
+    eng:{
+      theory:'Дни недели: Monday=понедельник, Tuesday=вторник, Wednesday=среда, Thursday=четверг, Friday=пятница, Saturday=суббота, Sunday=воскресенье',
+      tasks:['Выучи все 7 дней недели','Напиши их по-английски','Сегодня какой день? Напиши по-английски']
+    },
+    izo:{
+      theory:'Узор и орнамент — повторяющийся рисунок. Бывают полосатые, клетчатые, цветочные.',
+      task:'Нарисуй красивый орнамент из повторяющихся фигур'
+    }
+  },
+  // 11
+  {
+    title:'День 11 — Умножение на 9',
+    math:{
+      theory:'Таблица умножения на 9:\n9×1=9, 9×2=18, 9×3=27, 9×4=36, 9×5=45\n9×6=54, 9×7=63, 9×8=72, 9×9=81, 9×10=90\nСекрет: сумма цифр в ответе всегда 9!',
+      ex:[{q:'9 × 2',a:18},{q:'9 × 3',a:27},{q:'9 × 4',a:36},{q:'9 × 5',a:45},{q:'9 × 7',a:63},{q:'9 × 9',a:81}]
+    },
+    rus:{
+      theory:'Имя прилагательное — отвечает на вопросы КАКОЙ? КАКАЯ? КАКОЕ? КАКИЕ?\nКрасный, большой, добрый, умная',
+      tasks:['Придумай прилагательные к словам: кошка, день, дом','Запиши 5 прилагательных описывающих тебя','Составь предложение с 2 прилагательными']
+    },
+    eng:{
+      theory:'Семья: mother=мама, father=папа, sister=сестра, brother=брат, grandmother=бабушка, grandfather=дедушка',
+      tasks:['Выучи 6 слов о семье','Напиши про свою семью: My mother is...','Переведи: I have a sister. Her name is...']
+    },
+    izo:{
+      theory:'Аппликация — картинка из вырезанных и наклеенных фигур. Можно нарисовать!',
+      task:'Нарисуй аппликацию: осеннее дерево из оранжевых и красных листьев'
+    }
+  },
+  // 12
+  {
+    title:'День 12 — Деление на 2 и 3',
+    math:{
+      theory:'Деление — обратное действие умножения.\n6 ÷ 2 = 3 (потому что 2 × 3 = 6)\n12 ÷ 3 = 4 (потому что 3 × 4 = 12)',
+      ex:[{q:'8 ÷ 2',a:4},{q:'12 ÷ 2',a:6},{q:'9 ÷ 3',a:3},{q:'18 ÷ 3',a:6},{q:'16 ÷ 2',a:8},{q:'21 ÷ 3',a:7}]
+    },
+    rus:{
+      theory:'Глагол — часть речи, которая обозначает действие. Отвечает на вопросы ЧТО ДЕЛАЕТ? ЧТО ДЕЛАЛ?\nИдёт, бежит, читает, рисует',
+      tasks:['Найди глаголы: Маша читает книгу. Кошка спит.','Придумай 5 глаголов того, что ты умеешь делать','Составь 2 предложения с глаголами']
+    },
+    eng:{
+      theory:'Школьные предметы: math=математика, Russian=русский, English=английский, art=рисование, music=музыка',
+      tasks:['Напиши 5 школьных предметов по-английски','I like math! (Мне нравится математика!) Напиши про свой любимый предмет','Переведи: English is interesting.']
+    },
+    izo:{
+      theory:'Штриховка — способ закрасить рисунок параллельными линиями. Чем ближе линии, тем темнее.',
+      task:'Нарисуй яблоко и закрась его штриховкой'
+    }
+  },
+  // 13
+  {
+    title:'День 13 — Деление на 4 и 5',
+    math:{
+      theory:'Деление на 4 и 5:\n20 ÷ 4 = 5, 28 ÷ 4 = 7\n25 ÷ 5 = 5, 45 ÷ 5 = 9',
+      ex:[{q:'20 ÷ 4',a:5},{q:'28 ÷ 4',a:7},{q:'32 ÷ 4',a:8},{q:'25 ÷ 5',a:5},{q:'40 ÷ 5',a:8},{q:'35 ÷ 5',a:7}]
+    },
+    rus:{
+      theory:'Имя существительное — часть речи, обозначает предмет. Отвечает на вопросы КТО? ЧТО?\nКто? — человек, кошка, птица\nЧто? — стол, книга, облако',
+      tasks:['Найди существительные: Красивая кошка спит на мягком диване','Напиши 5 существительных отвечающих на КТО?','Напиши 5 существительных отвечающих на ЧТО?']
+    },
+    eng:{
+      theory:'Одежда: shirt=рубашка, dress=платье, trousers=брюки, shoes=туфли, hat=шапка, jacket=куртка',
+      tasks:['Выучи 6 слов одежды','Напиши что ты носишь сегодня по-английски','Переведи: I am wearing a blue dress and white shoes.']
+    },
+    izo:{
+      theory:'Перспектива — ближние предметы больше, дальние меньше.',
+      task:'Нарисуй дорогу уходящую вдаль — она сужается на горизонте'
+    }
+  },
+  // 14
+  {
+    title:'День 14 — Задачи на умножение',
+    math:{
+      theory:'Задача: У каждого ученика 4 карандаша. Карандашей всего 24. Сколько учеников?\n24 ÷ 4 = 6 учеников',
+      ex:[{q:'5 × 6',a:30},{q:'7 × 4',a:28},{q:'9 × 3',a:27},{q:'6 × 8',a:48},{q:'4 × 7',a:28},{q:'8 × 5',a:40}]
+    },
+    rus:{
+      theory:'Предлоги — короткие слова, которые связывают другие слова в предложении:\nВ, НА, ПОД, НАД, ЗА, ПЕРЕД, У, С, К, ОТ',
+      tasks:['Вставь предлог: книга лежит ___ столе, кошка сидит ___ диване','Придумай 3 предложения с предлогами В и НА','Найди предлоги: Мы идём в школу. Книга на столе.']
+    },
+    eng:{
+      theory:'Еда: bread=хлеб, milk=молоко, meat=мясо, rice=рис, soup=суп, cake=торт, water=вода',
+      tasks:['Выучи 7 слов еды','Напиши что ты ел сегодня по-английски','Переведи: I like milk and bread. I do not like soup.']
+    },
+    izo:{
+      theory:'Смешение цветов: красный + синий = фиолетовый, красный + жёлтый = оранжевый, синий + жёлтый = зелёный',
+      task:'Нарисуй цветовой круг с основными и смешанными цветами'
+    }
+  },
+  // 15
+  {
+    title:'День 15 — Половина пути! 🎉',
+    math:{
+      theory:'Молодец! Ты дошла до середины! Повторяем умножение 2-9.\nЭто очень важная тема — таблица умножения нужна всегда!',
+      ex:[{q:'6 × 7',a:42},{q:'8 × 9',a:72},{q:'5 × 8',a:40},{q:'7 × 6',a:42},{q:'9 × 4',a:36},{q:'3 × 9',a:27}]
+    },
+    rus:{
+      theory:'Повторение! Вспомним всё что учили:\n• Гласные и согласные\n• Ударение, слоги\n• Части речи: существительное, глагол, прилагательное',
+      tasks:['Напиши 5 слов — существительных, 5 — глаголов, 5 — прилагательных','Поставь ударение: молоко, школа, учитель, тетрадь','Раздели на слоги: ШУКРОНА, МОСКВА, КЫРГЫЗСТАН']
+    },
+    eng:{
+      theory:'Повторяем всё! Цвета, числа, животные, семья, еда, одежда, школа.',
+      tasks:['Напиши по 2 слова из каждой темы (цвета, животные, еда)','Составь 3 предложения о себе по-английски','My name is... I am ... years old. I like...']
+    },
+    izo:{
+      theory:'Полдороги позади! Нарисуй себя — счастливую школьницу!',
+      task:'Нарисуй себя с портфелем и любимым предметом в руках 🎒'
+    }
+  },
+  // 16
+  {
+    title:'День 16 — Трёхзначные числа',
+    math:{
+      theory:'Трёхзначные числа: 100, 200, ... 999.\n345 = 300 + 40 + 5\nСотни, десятки, единицы',
+      ex:[{q:'200 + 50',a:250},{q:'300 + 40 + 7',a:347},{q:'145 + 30',a:175},{q:'267 + 20',a:287},{q:'400 + 60 + 8',a:468},{q:'130 + 15',a:145}]
+    },
+    rus:{
+      theory:'Жи-ши пиши с буквой И: живот, шины, ежи, ужи, лыжи, мыши\nЧа-ща пиши с буквой А: чаша, роща, дача, чайник',
+      tasks:['Напиши 5 слов с жи-ши','Напиши 5 слов с ча-ща','Вставь букву: ж_вот, ш_шка, ч_йник, рощ_, нож_']
+    },
+    eng:{
+      theory:'Местоимения: I=я, you=ты, he=он, she=она, we=мы, they=они\nI am a girl. He is a boy. She is my sister.',
+      tasks:['Напиши все 6 местоимений','Составь предложения: I am... He is... She is...','Переведи: We are students. They are friends.']
+    },
+    izo:{
+      theory:'Зима в картинах художников — белый снег, голые деревья, серое небо.',
+      task:'Нарисуй зимний дворик — снег, деревья, домики'
+    }
+  },
+  // 17
+  {
+    title:'День 17 — Сложение трёхзначных',
+    math:{
+      theory:'Сложение трёхзначных чисел:\n  234\n+ 152\n-----\n  386\nСначала единицы, потом десятки, потом сотни.',
+      ex:[{q:'123 + 234',a:357},{q:'245 + 132',a:377},{q:'316 + 251',a:567},{q:'142 + 235',a:377},{q:'421 + 356',a:777},{q:'203 + 184',a:387}]
+    },
+    rus:{
+      theory:'Ча-ща, чу-щу:\nЧУ-ЩУ пиши с буквой У: чудо, щука, чулок, прищурить\nЧА-ЩА пиши с буквой А: чайка, щавель',
+      tasks:['Напиши 5 слов с чу-щу','Вставь букву: ч_до, щ_ка, ч_лан','Придумай предложение со словом «чудо»']
+    },
+    eng:{
+      theory:'Глагол to be (быть): I am, you are, he/she is, we are, they are\nI am happy. She is smart. We are students.',
+      tasks:['Составь 5 предложений с глаголом am/is/are','Переведи: He is tall. She is kind. They are friends.','Напиши о себе: I am... (умная, весёлая, добрая)']
+    },
+    izo:{
+      theory:'Весна! Яркие цвета возвращаются — зелёный, розовый, голубой.',
+      task:'Нарисуй весеннюю полянку с цветами и бабочками'
+    }
+  },
+  // 18
+  {
+    title:'День 18 — Вычитание трёхзначных',
+    math:{
+      theory:'Вычитание трёхзначных чисел:\n  567\n- 234\n-----\n  333\nВычитаем по разрядам.',
+      ex:[{q:'456 - 123',a:333},{q:'789 - 345',a:444},{q:'654 - 321',a:333},{q:'987 - 453',a:534},{q:'563 - 241',a:322},{q:'875 - 342',a:533}]
+    },
+    rus:{
+      theory:'Сочетания ЧК, ЧН, НЧ, НЩ, ЩН пишутся без мягкого знака:\nручка, речка, ночной, конечно, нянчить',
+      tasks:['Напиши 5 слов с сочетанием ЧК','Напиши 5 слов с сочетанием ЧН','Вставь пропущенные буквы: ру_ка, но_ной, коне_но']
+    },
+    eng:{
+      theory:'Игрушки и хобби: book=книга, ball=мяч, doll=кукла, game=игра, draw=рисовать, read=читать, play=играть',
+      tasks:['Выучи 7 слов','Напиши свои хобби по-английски: I like to...','Переведи: I like to read books and draw pictures.']
+    },
+    izo:{
+      theory:'Лето! Солнце, море, цветы, яркие цвета.',
+      task:'Нарисуй летние каникулы — что ты любишь делать летом?'
+    }
+  },
+  // 19
+  {
+    title:'День 19 — Периметр и площадь',
+    math:{
+      theory:'Периметр — сумма всех сторон фигуры.\nПрямоугольник: P = (a + b) × 2\nКвадрат со стороной 4 см: P = 4 × 4 = 16 см',
+      ex:[{q:'P квадрата 5 см',a:20},{q:'P квадрата 3 см',a:12},{q:'P прямоугол. 4+6',a:20},{q:'P прямоугол. 3+7',a:20},{q:'P квадрата 7 см',a:28},{q:'P прямоугол. 5+8',a:26}]
+    },
+    rus:{
+      theory:'Текст — несколько предложений, связанных одной темой. У текста есть:\n• Заголовок (название)\n• Начало, основная часть, конец',
+      tasks:['Напиши маленький текст (3-4 предложения) о своём любимом животном','Придумай заголовок для своего текста','Перечитай и проверь — все предложения о одной теме?']
+    },
+    eng:{
+      theory:'Погода: sunny=солнечно, rainy=дождливо, windy=ветрено, cloudy=облачно, snowy=снежно, hot=жарко, cold=холодно',
+      tasks:['Выучи 7 слов о погоде','Какая сегодня погода? Напиши по-английски: Today is...','Переведи: In winter it is cold and snowy. In summer it is hot and sunny.']
+    },
+    izo:{
+      theory:'Архитектура — рисование зданий. Здания состоят из прямоугольников, треугольников, кругов.',
+      task:'Нарисуй свой дом или школу'
+    }
+  },
+  // 20
+  {
+    title:'День 20 — Доли и дроби',
+    math:{
+      theory:'Доля — часть целого.\n1/2 — одна вторая (половина)\n1/4 — одна четвёртая\n1/3 — одна третья\nПицца на 4 части — каждый получает 1/4',
+      ex:[{q:'1/2 от 10',a:5},{q:'1/2 от 20',a:10},{q:'1/4 от 8',a:2},{q:'1/4 от 12',a:3},{q:'1/3 от 9',a:3},{q:'1/3 от 15',a:5}]
+    },
+    rus:{
+      theory:'Диалог — разговор между двумя и более людьми. Каждая реплика пишется с новой строки и начинается с тире:\n— Привет!\n— Привет! Как дела?',
+      tasks:['Напиши диалог из 4 реплик между тобой и другом','В диалоге поставь тире перед каждой репликой','Придумай диалог между учителем и учеником']
+    },
+    eng:{
+      theory:'Профессии: teacher=учитель, doctor=врач, cook=повар, driver=водитель, engineer=инженер, artist=художник',
+      tasks:['Выучи 6 профессий','Кем ты хочешь быть? I want to be a...','Переведи: My mother is a doctor. My father is an engineer.']
+    },
+    izo:{
+      theory:'Животные в движении — как нарисовать бегущую кошку, летящую птицу.',
+      task:'Нарисуй 3 животных в движении: птица летит, рыба плывёт, кошка бежит'
+    }
+  },
+  // 21
+  {
+    title:'День 21 — Время и часы',
+    math:{
+      theory:'Часы показывают время. Часовая стрелка — короткая, минутная — длинная.\n1 час = 60 минут\n1 сутки = 24 часа\n1 неделя = 7 дней\n1 год = 12 месяцев = 365 дней',
+      ex:[{q:'60 × 2 часа',a:120},{q:'7 × 2 недели',a:14},{q:'24 × 2 суток',a:48},{q:'12 × 2 года',a:24},{q:'30 + 45 мин',a:75},{q:'60 - 25 мин',a:35}]
+    },
+    rus:{
+      theory:'Синонимы — слова близкие по смыслу:\nбольшой — огромный — крупный\nмаленький — крошечный — малюсенький',
+      tasks:['Подбери синонимы: грустный, весёлый, быстрый','Замени слово синонимом: Он идёт по дороге (шагает, движется)','Придумай синонимы к слову «красивый»']
+    },
+    eng:{
+      theory:'Время: What time is it? = Который час?\nIt is 3 o\'clock. = 3 часа.\nIt is half past 4. = Половина пятого.',
+      tasks:['Выучи как спросить время по-английски','Напиши 5 разных времён по-английски','Переведи: I wake up at 7 o\'clock. School starts at 8 o\'clock.']
+    },
+    izo:{
+      theory:'Декоративное рисование — узоры на посуде, ткани, предметах.',
+      task:'Нарисуй красивую тарелку с декоративным узором'
+    }
+  },
+  // 22
+  {
+    title:'День 22 — Антонимы и антонимы',
+    math:{
+      theory:'Смешанные задачи. Читай внимательно, выбери нужное действие!',
+      ex:[{q:'56 + 28',a:84},{q:'93 - 47',a:46},{q:'8 × 7',a:56},{q:'54 ÷ 6',a:9},{q:'7 × 9',a:63},{q:'72 ÷ 8',a:9}]
+    },
+    rus:{
+      theory:'Антонимы — слова с противоположным значением:\nбольшой ↔ маленький, добрый ↔ злой, день ↔ ночь, горячий ↔ холодный',
+      tasks:['Найди антонимы: высокий, старый, быстрый, светлый','Составь пары антонимов (не менее 5 пар)','Придумай предложение используя пару антонимов']
+    },
+    eng:{
+      theory:'Антонимы по-английски: big-small, hot-cold, fast-slow, happy-sad, old-new, good-bad',
+      tasks:['Выучи 6 пар антонимов','Составь предложения: The elephant is big. The mouse is small.','Переведи: Summer is hot, winter is cold.']
+    },
+    izo:{
+      theory:'Контраст — сочетание противоположных цветов делает рисунок ярким.',
+      task:'Нарисуй картину используя контрастные цвета (например красный + зелёный)'
+    }
+  },
+  // 23
+  {
+    title:'День 23 — Задачи с несколькими действиями',
+    math:{
+      theory:'Задачи в два действия:\nУ Маши было 24 яблока. Она отдала 1/3. Сколько осталось?\n1) 24 ÷ 3 = 8 (отдала)\n2) 24 - 8 = 16 (осталось)',
+      ex:[{q:'(14 + 6) × 3',a:60},{q:'(20 - 5) × 4',a:60},{q:'(8 + 4) ÷ 3',a:4},{q:'(30 - 6) ÷ 4',a:6},{q:'45 ÷ (3 × 3)',a:5},{q:'(7 + 5) × 6',a:72}]
+    },
+    rus:{
+      theory:'Однородные члены предложения — одинаковые члены, отвечающие на один вопрос.\nНа столе лежат книги, ручки и тетради.\nОднородные члены разделяются запятыми!',
+      tasks:['Найди однородные члены: Маша пела, танцевала и смеялась','Поставь запятые: В лесу живут волки медведи лисы','Составь предложение с однородными членами']
+    },
+    eng:{
+      theory:'Предлоги места: in=в, on=на, under=под, behind=за, in front of=перед, next to=рядом',
+      tasks:['Выучи 6 предлогов','Опиши где находятся предметы в твоей комнате: The book is on the table.','Переведи: The cat is under the chair. The ball is behind the sofa.']
+    },
+    izo:{
+      theory:'Морской пейзаж — волны, корабли, чайки, маяк.',
+      task:'Нарисуй морской пейзаж с корабликом'
+    }
+  },
+  // 24
+  {
+    title:'День 24 — Геометрия',
+    math:{
+      theory:'Геометрические фигуры:\n• Треугольник — 3 угла, 3 стороны\n• Четырёхугольник — 4 угла, 4 стороны\n• Круг — нет углов\n• Прямоугольник — 4 прямых угла',
+      ex:[{q:'Углов в треугольнике',a:3},{q:'Сторон квадрата',a:4},{q:'Углов у круга',a:0},{q:'P квадрата 6 см',a:24},{q:'3 × 4 фигуры',a:12},{q:'Углов в 3 треугольниках',a:9}]
+    },
+    rus:{
+      theory:'Обращение — слово или словосочетание, называющее того, к кому обращаются. Выделяется запятой:\nМаша, иди сюда!\nЯ рад, друг, тебя видеть.',
+      tasks:['Поставь запятую у обращений: Шукрона иди к доске. Мама я хочу есть.','Составь 3 предложения с обращением','Напиши письмо другу используя обращение']
+    },
+    eng:{
+      theory:'Форма и цвет: circle=круг, square=квадрат, triangle=треугольник, rectangle=прямоугольник\nA red circle. A blue square.',
+      tasks:['Выучи 4 фигуры по-английски','Опиши 4 предмета: форма + цвет по-английски','Нарисуй и подпиши 4 фигуры по-английски']
+    },
+    izo:{
+      theory:'Абстрактное искусство — картины из форм и цветов без конкретных предметов.',
+      task:'Нарисуй абстрактную картину — красивые формы и цвета'
+    }
+  },
+  // 25
+  {
+    title:'День 25 — Повторение таблицы умножения',
+    math:{
+      theory:'Супер-повторение! Таблица умножения 2-9.\nЭто самое важное в математике 3 класса.\nПовтори все столбики!',
+      ex:[{q:'6 × 8',a:48},{q:'7 × 7',a:49},{q:'9 × 6',a:54},{q:'8 × 8',a:64},{q:'7 × 9',a:63},{q:'6 × 9',a:54}]
+    },
+    rus:{
+      theory:'Сложные слова — слова, состоящие из двух корней:\nсамолёт (сам + лёт), снегопад (снег + пад), листопад, водопад, пылесос',
+      tasks:['Раздели на части: самолёт, снегопад, пароход','Придумай 3 сложных слова','Составь предложение со словом «листопад»']
+    },
+    eng:{
+      theory:'Транспорт: car=машина, bus=автобус, train=поезд, plane=самолёт, ship=корабль, bike=велосипед',
+      tasks:['Выучи 6 видов транспорта','Как ты едешь в школу? I go to school by...','Переведи: I like to travel by plane. It is fast!']
+    },
+    izo:{
+      theory:'Транспорт в рисунке — машины, самолёты, поезда.',
+      task:'Нарисуй свой любимый транспорт в красивом городе'
+    }
+  },
+  // 26
+  {
+    title:'День 26 — Письмо и сочинение',
+    math:{
+      theory:'Задачи на движение:\nСкорость × Время = Расстояние\nВелосипедист едет 15 км/ч, 2 часа. Расстояние = 15 × 2 = 30 км',
+      ex:[{q:'15 × 2 км',a:30},{q:'20 × 3 км',a:60},{q:'12 × 4 км',a:48},{q:'10 × 5 км',a:50},{q:'25 × 2 км',a:50},{q:'18 × 3 км',a:54}]
+    },
+    rus:{
+      theory:'Сочинение — твой собственный текст. Пиши о том, что ты чувствуешь и думаешь!\nПлан: 1. Вступление, 2. Основная часть, 3. Заключение.',
+      tasks:['Напиши мини-сочинение «Моя любимая игра» (5-6 предложений)','Используй прилагательные, глаголы, существительные','Придумай интересный заголовок']
+    },
+    eng:{
+      theory:'Описание человека: tall=высокий, short=низкий, thin=худой, kind=добрый, smart=умный, funny=смешной, beautiful=красивый',
+      tasks:['Выучи 7 прилагательных','Опиши себя по-английски: I am...','Опиши лучшего друга: My friend is...']
+    },
+    izo:{
+      theory:'Иллюстрация — рисунок к тексту или книге.',
+      task:'Нарисуй иллюстрацию к твоему мини-сочинению'
+    }
+  },
+  // 27
+  {
+    title:'День 27 — Природа и наука',
+    math:{
+      theory:'Единицы измерения:\n1 кг = 1000 г\n1 км = 1000 м\n1 м = 100 см\n1 л = 1000 мл',
+      ex:[{q:'2 кг = ___ г',a:2000},{q:'3 км = ___ м',a:3000},{q:'500 см = ___ м',a:5},{q:'4 м = ___ см',a:400},{q:'2000 г = ___ кг',a:2},{q:'5000 м = ___ км',a:5}]
+    },
+    rus:{
+      theory:'Описание природы. Используй красочные слова:\nЗолотая осень, пушистый снег, ароматные цветы, звонкий ручей.',
+      tasks:['Напиши описание одного времени года (5 предложений)','Используй не менее 5 прилагательных','Придумай метафору: трава как..., небо как...']
+    },
+    eng:{
+      theory:'Природа: tree=дерево, flower=цветок, river=река, mountain=гора, forest=лес, sky=небо, sun=солнце',
+      tasks:['Выучи 7 слов природы','Опиши что ты видишь из окна по-английски','Переведи: The sky is blue. The sun is bright. The flowers are beautiful.']
+    },
+    izo:{
+      theory:'Осенний пейзаж — жёлтые, оранжевые, красные листья.',
+      task:'Нарисуй осенний парк с опадающими листьями'
+    }
+  },
+  // 28
+  {
+    title:'День 28 — Большое повторение',
+    math:{
+      theory:'Повторяем всё! Сложение, вычитание, умножение, деление.\nТы знаешь всё это — покажи!',
+      ex:[{q:'347 + 234',a:581},{q:'568 - 245',a:323},{q:'9 × 8',a:72},{q:'63 ÷ 7',a:9},{q:'7 × 6 + 5',a:47},{q:'100 - 8 × 9',a:28}]
+    },
+    rus:{
+      theory:'Повторение частей речи:\n• Существительное: КТО? ЧТО?\n• Прилагательное: КАКОЙ? КАКАЯ?\n• Глагол: ЧТО ДЕЛАЕТ?\n• Предлог: короткое слово (в, на, под)',
+      tasks:['Разбери предложение по частям речи: «Маленькая кошка спит на мягком диване»','Напиши 2 предложения используя все 4 части речи','Составь схему: сущ. + прил. + гл. + предл. + сущ.']
+    },
+    eng:{
+      theory:'Повторяем всё! Числа, цвета, животные, семья, еда, транспорт, природа, школа.',
+      tasks:['Напиши рассказ «Мой день» по-английски (5-6 предложений)','Используй разные темы: еда, школа, семья','In the morning I... At school I... In the evening I...']
+    },
+    izo:{
+      theory:'Коллаж — картина из разных стилей и образов.',
+      task:'Нарисуй всё что ты любишь — любимые вещи, животные, природа — в одном рисунке!'
+    }
+  },
+  // 29
+  {
+    title:'День 29 — Финальное повторение',
+    math:{
+      theory:'Последнее повторение перед финалом!\nТы решила более 150 примеров — ты молодец! 🌟',
+      ex:[{q:'8 × 9 - 12',a:60},{q:'7 × 7 + 13',a:62},{q:'(45 + 15) ÷ 6',a:10},{q:'100 - 6 × 7',a:58},{q:'9 × 9 - 1',a:80},{q:'(8 + 4) × 7',a:84}]
+    },
+    rus:{
+      theory:'Заглавная буква: начало предложения, имена, названия городов, стран, рек, улиц.\nИмена: Шукрона, Москва, Россия, Волга, улица Ленина.',
+      tasks:['Напиши правильно: шукрона бакирова живёт в москве','Исправь ошибки: мы едем в кыргызстан через россию','Напиши своё полное имя, город, страну с заглавных букв']
+    },
+    eng:{
+      theory:'Итоговый тест по-английски! Напиши маленькое письмо другу.',
+      tasks:['Dear friend, My name is Shukrona. I am 9 years old. I live in Moscow. I like... Write a similar letter!','Используй: I am, I have, I like, I can','Закончи: My favourite subject is... My favourite food is...']
+    },
+    izo:{
+      theory:'Твой любимый рисунок — нарисуй что-то особенное напоследок!',
+      task:'Нарисуй свою мечту — куда ты хочешь поехать, кем стать, что увидеть?'
+    }
+  },
+  // 30
+  {
+    title:'🏆 День 30 — Ты сделала это!',
+    math:{
+      theory:'ПОЗДРАВЛЯЕМ! 🎉\nТы прошла весь курс! Ты решила больше 180 примеров, выучила таблицу умножения, трёхзначные числа и задачи!',
+      ex:[{q:'6 × 7 × 2',a:84},{q:'9 × 9',a:81},{q:'100 - 19',a:81},{q:'8 × 8',a:64},{q:'(10 - 1) × 9',a:81},{q:'30 × 3',a:90}]
+    },
+    rus:{
+      theory:'Ты молодец, Шукрона! За 30 дней ты повторила:\n✅ Части речи\n✅ Правила орфографии\n✅ Текст и предложение\n✅ Синонимы и антонимы',
+      tasks:['Напиши письмо себе «Что я узнала за 30 дней»','Напиши чего ты достигла и чем гордишься','Поставь себе оценку и объясни почему!']
+    },
+    eng:{
+      theory:'Congratulations! = Поздравляем!\nYou did it! = Ты сделала это!\nYou are amazing! = Ты потрясающая!\nI am proud of you! = Я горжусь тобой!',
+      tasks:['Напиши чему ты научилась по-английски за 30 дней','I learned... I can now... My favourite was...','Напиши: I am smart! I am hardworking! I am awesome!']
+    },
+    izo:{
+      theory:'Финальный рисунок — подарок себе!',
+      task:'🏆 Нарисуй медаль или грамоту для себя — ты это заслужила!'
+    }
+  }
+];
+
+// ========== INIT ==========
+function startApp(){
+  document.getElementById('splash').style.opacity='0';
+  setTimeout(()=>{
+    document.getElementById('splash').style.display='none';
+    document.getElementById('appHeader').style.display='block';
+    document.getElementById('appMain').style.display='block';
+    renderGrid();
+    updateStats();
+  },500);
 }
 
-function loadDay(day) {
-  currentDay = day;
-  const d = day - 1;
-  const weekdays = ['Yakshanba','Dushanba','Seshanba','Chorshanba','Payshanba','Juma','Shanba'];
-  document.getElementById('dayNum').textContent = `📅 ${day}-kun`;
-  document.getElementById('dayWeek').textContent = `Mavzu ${day}/30`;
-  document.getElementById('motivoQuote').textContent = quotes[(day-1) % quotes.length];
+function renderGrid(){
+  const g=document.getElementById('daysGrid');
+  g.innerHTML='';
+  for(let i=0;i<30;i++){
+    const n=i+1;
+    const isDone=S.done.includes(n);
+    const isActive=n===S.day;
+    const isLocked=!isDone&&!isActive;
+    const d=document.createElement('div');
+    d.className='dc '+(isDone?'done':isActive?'active':'locked');
+    d.innerHTML=`<div class="dc-ico">${isDone?'✅':isActive?'✏️':'🔒'}</div>
+      <div class="dc-n">${n}</div>
+      <div class="dc-l">${isDone?'ГОТОВО':isActive?'СЕГОДНЯ':'ЗАКРЫТО'}</div>`;
+    if(!isLocked) d.onclick=()=>openModal(n);
+    g.appendChild(d);
+  }
+  document.getElementById('hDay').textContent='День '+S.day;
+  const pct=Math.round(S.done.length/30*100);
+  document.getElementById('progFill').style.width=pct+'%';
+  document.getElementById('progPct').textContent=pct+'%';
+}
 
-  const isDone = completedDays.includes(day);
-  const btn = document.getElementById('completeBtn');
-  btn.textContent = isDone ? '✅ Bajarildi' : '✅ Tugatdim!';
-  btn.className = 'day-complete-btn' + (isDone ? ' done' : '');
-  document.getElementById('congratsBanner').className = 'congrats-banner' + (isDone ? ' show' : '');
-  solvedCount = 0;
-  document.getElementById('todayStars').textContent = isDone ? '4' : '0';
-  document.getElementById('mathDone').textContent = '0/10';
-  document.getElementById('tasksDone').textContent = '0';
+function updateStats(){
+  document.getElementById('sDone').textContent=S.done.length;
+  document.getElementById('sMath').textContent=S.mathSolved;
+  document.getElementById('sWords').textContent=S.wordsDone;
+  document.getElementById('sStars').textContent=S.stars;
+}
 
-  // Math
-  const topic = curriculum[d][0];
-  const explainIdx = Math.min(d, mathExplains.length - 1);
-  document.getElementById('mathExplainContent').innerHTML = `
-    <div class="lesson-block math-block">
-      <div class="lesson-title">📌 ${topic}</div>
-      <div class="lesson-explain">${mathExplains[explainIdx]}</div>
+// ========== MODAL ==========
+let currentTab='math';
+function openModal(n){
+  openDay=n;
+  const d=DAYS[n-1];
+  document.getElementById('shBadge').innerHTML='📅 ДЕНЬ '+n;
+  document.getElementById('shTtl').textContent=d.title;
+  document.getElementById('shSub').textContent='Математика • Русский • Английский • ИЗО';
+  const isDone=S.done.includes(n);
+  const btn=document.getElementById('compBtn');
+  btn.textContent=isDone?'✅ Этот день уже выполнен!':'✅ Готово! Следующий день!';
+  btn.className='comp-btn'+(isDone?' done-st':'');
+  currentTab='math';
+  renderSheetContent(n);
+  document.getElementById('ov').classList.add('open');
+  document.body.style.overflow='hidden';
+}
+
+function closeModal(){
+  document.getElementById('ov').classList.remove('open');
+  document.body.style.overflow='';
+  openDay=null;
+}
+document.getElementById('ov').addEventListener('click',function(e){if(e.target===this)closeModal();});
+
+function renderSheetContent(n){
+  const d=DAYS[n-1];
+  const body=document.getElementById('shBody');
+  // Tabs
+  let html=`<div class="subj-tabs">
+    <button class="stab m ${currentTab==='math'?'sel':''}" onclick="switchTab('math',${n})">📐 Математика</button>
+    <button class="stab r ${currentTab==='rus'?'sel':''}" onclick="switchTab('rus',${n})">📖 Русский</button>
+    <button class="stab e ${currentTab==='eng'?'sel':''}" onclick="switchTab('eng',${n})">🌍 Английский</button>
+    <button class="stab i ${currentTab==='izo'?'sel':''}" onclick="switchTab('izo',${n})">🎨 ИЗО</button>
+  </div>`;
+
+  // MATH
+  html+=`<div class="lesson-block ${currentTab==='math'?'active':''}" id="blMath">`;
+  html+=`<div class="theory-box blue"><div class="th-title" style="color:var(--blue);">📐 Теория</div><div class="th-body">${d.math.theory.replace(/\n/g,'<br>')}</div></div>`;
+  html+=`<div class="tasks-title">🔢 Примеры — реши все!</div>`;
+  html+=`<div class="math-grid" id="mathGrid_${n}">`;
+  d.math.ex.forEach((ex,i)=>{
+    const key=`math_${n}_${i}`;
+    const isSolved=localStorage.getItem(key)==='1';
+    html+=`<div class="math-card ${isSolved?'solved':''}" id="mc_${n}_${i}">
+      <span class="math-expr">${ex.q} = ?</span>
+      <input class="math-inp" type="number" placeholder="?" id="mi_${n}_${i}" onchange="checkMath(${n},${i},${ex.a})" ${isSolved?'disabled':''} value="${isSolved?ex.a:''}">
+      <div class="math-check ${isSolved?'ok':''}" id="mch_${n}_${i}" style="${isSolved?'display:block':''}">✅ Правильно!</div>
     </div>`;
-
-  currentExamples = getMathExamples(day);
-  currentExIdx = 0;
-  renderCurrentExample();
-
-  const mathTasks = [
-    `📝 ${topic} bo'yicha 5 ta misol daftarga yoz va yech`,
-    `🔢 1 dan 20 gacha sonlarni yoz`,
-    `🧮 Ikkita masala tuz va yech`,
-    `✏️ Daftarga: bugungi barcha misollarni qayta yoz`,
-    `📖 Jadval yod: ${topic}`,
-  ];
-  let tasksHtml = '<ul class="task-list">';
-  mathTasks.forEach((t, i) => {
-    tasksHtml += `<li class="task-item">
-      <div class="task-check" id="mt${day}_${i}" onclick="toggleTask(this)"></div>
-      <span>${t}</span></li>`;
   });
-  tasksHtml += '</ul>';
-  document.getElementById('mathTasksContent').innerHTML = tasksHtml;
+  html+=`</div></div>`;
 
-  // Russian
-  const rusData = rusExplains[d % rusExplains.length];
-  const rusTopic = curriculum[d][1];
-  document.getElementById('rusExplainContent').innerHTML = `
-    <div class="lesson-block rus-block">
-      <div class="lesson-title">📌 ${rusTopic}</div>
-      <div class="lesson-explain">${rusData[0]}</div>
-    </div>`;
-
-  const exerciseLines = rusData[1].split('\n').filter(Boolean);
-  let exHtml = '<ul class="task-list">';
-  exerciseLines.forEach((line, i) => {
-    exHtml += `<li class="task-item">
-      <div class="task-check" id="re${day}_${i}" onclick="toggleTask(this)"></div>
-      <span>${line}</span></li>`;
-  });
-  exHtml += '</ul>';
-  document.getElementById('rusExerciseContent').innerHTML = `
-    <div class="sec-title">✏️ Mashqlar — daftarga yoz:</div>${exHtml}`;
-
-  document.getElementById('rusReadContent').innerHTML = `
-    <div class="lesson-block rus-block">
-      <div class="lesson-title">📖 O'qish matni — sekin, aniq o'qi:</div>
-      <div class="lesson-explain" style="font-size:1rem;line-height:1.8">${rusData[2].replace(/\n/g,'<br>')}</div>
-    </div>
-    <ul class="task-list">
-      <li class="task-item"><div class="task-check" id="rr${day}_0" onclick="toggleTask(this)"></div><span>Matnni 2 marta o'qi</span></li>
-      <li class="task-item"><div class="task-check" id="rr${day}_1" onclick="toggleTask(this)"></div><span>Og'zaki qayta ayt</span></li>
-      <li class="task-item"><div class="task-check" id="rr${day}_2" onclick="toggleTask(this)"></div><span>Daftarga nusxa ko'chir</span></li>
-    </ul>`;
-
-  // English
-  const engIdx = d % engWords.length;
-  const eng = engWords[engIdx];
-  const engTopic = curriculum[d][2];
-  let wHtml = `<div class="lesson-block eng-block"><div class="lesson-title">📝 ${engTopic}</div>`;
-  eng.words.forEach(group => {
-    wHtml += '<div class="word-row">';
-    group.forEach(w => { wHtml += `<span class="word-chip">${w}</span>`; });
-    wHtml += '</div>';
-  });
-  wHtml += '</div>';
-  document.getElementById('engWordsContent').innerHTML = wHtml;
-
-  document.getElementById('engGrammarContent').innerHTML = `
-    <div class="lesson-block eng-block">
-      <div class="lesson-title">📚 Grammar qoidasi</div>
-      <div class="lesson-explain">
-        <b>I am</b> — Men ... man<br>
-        <b>You are</b> — Sen ... san<br>
-        <b>He/She is</b> — U ... dir<br><br>
-        <b>Misol:</b><br>
-        I am Shukrona. (Men Shukronaman.)<br>
-        She is a student. (U o'quvchi.)<br>
-        He is happy. (U xursand.)
+  // RUSSIAN
+  html+=`<div class="lesson-block ${currentTab==='rus'?'active':''}" id="blRus">`;
+  html+=`<div class="theory-box orange"><div class="th-title" style="color:var(--orange);">📖 Правило</div><div class="th-body">${d.rus.theory.replace(/\n/g,'<br>')}</div></div>`;
+  html+=`<div class="tasks-title">✏️ Задания — выполни все!</div>`;
+  d.rus.tasks.forEach((t,i)=>{
+    const key=`rus_${n}_${i}`;
+    const isDoneT=localStorage.getItem(key)==='1';
+    html+=`<div class="task-item ${isDoneT?'done-task':''}" id="ti_rus_${n}_${i}">
+      <div class="task-cb ${isDoneT?'done':''}" onclick="toggleTask('rus',${n},${i},this)">
+        ${isDoneT?'✓':''}
+      </div>
+      <div class="task-body">
+        <div class="task-q">${t}</div>
+        <div class="task-hint">Выполни в тетради и отметь галочку ✓</div>
       </div>
     </div>`;
+  });
+  html+=`</div>`;
 
-  document.getElementById('engTaskContent').innerHTML = `
-    <div class="sec-title">✏️ Inglizcha vazifalar:</div>
-    <ul class="task-list">
-      <li class="task-item"><div class="task-check" id="et${day}_0" onclick="toggleTask(this)"></div><span>Bugungi 6 ta so'zni daftarga yoz va tarjima qil</span></li>
-      <li class="task-item"><div class="task-check" id="et${day}_1" onclick="toggleTask(this)"></div><span>Har bir so'zni 3 marta yoz</span></li>
-      <li class="task-item"><div class="task-check" id="et${day}_2" onclick="toggleTask(this)"></div><span>I am ____. She is ____. — 3 ta gap tuz</span></li>
-      <li class="task-item"><div class="task-check" id="et${day}_3" onclick="toggleTask(this)"></div><span>So'zlarni yoddan ayt (oynaga qarab)</span></li>
-    </ul>`;
+  // ENGLISH
+  html+=`<div class="lesson-block ${currentTab==='eng'?'active':''}" id="blEng">`;
+  html+=`<div class="theory-box green"><div class="th-title" style="color:var(--green);">🌍 New Words</div><div class="th-body">${d.eng.theory.replace(/\n/g,'<br>')}</div></div>`;
+  html+=`<div class="tasks-title">✏️ Задания</div>`;
+  d.eng.tasks.forEach((t,i)=>{
+    const key=`eng_${n}_${i}`;
+    const isDoneT=localStorage.getItem(key)==='1';
+    html+=`<div class="task-item ${isDoneT?'done-task':''}" id="ti_eng_${n}_${i}">
+      <div class="task-cb ${isDoneT?'done':''}" onclick="toggleTask('eng',${n},${i},this)">
+        ${isDoneT?'✓':''}
+      </div>
+      <div class="task-body">
+        <div class="task-q">${t}</div>
+        <div class="task-hint">Выполни в тетради и отметь галочку ✓</div>
+      </div>
+    </div>`;
+  });
+  html+=`</div>`;
 
-  // Art
-  const artIdx = d % artLessons.length;
-  const art = artLessons[artIdx];
-  const artTopic = curriculum[d][3];
-  document.getElementById('artContent').innerHTML = `
-    <div class="draw-instructions">
-      <h4>🎨 Bugun chizamiz: ${artTopic}</h4>
-      <ol>${art.steps.map(s=>`<li>${s}</li>`).join('')}</ol>
+  // IZO
+  html+=`<div class="lesson-block ${currentTab==='izo'?'active':''}" id="blIzo">`;
+  html+=`<div class="theory-box pink"><div class="th-title" style="color:var(--pink);">🎨 ИЗО — Теория</div><div class="th-body">${d.izo.theory.replace(/\n/g,'<br>')}</div></div>`;
+  html+=`<div class="tasks-title">🖌️ Задание — нарисуй!</div>`;
+  html+=`<div class="theory-box yellow"><div class="th-title" style="color:var(--yellow);">🖼️ ${d.izo.task}</div></div>`;
+  const izoKey=`izo_${n}`;
+  const izoDone=localStorage.getItem(izoKey)==='1';
+  html+=`<div style="margin-bottom:12px;">
+    <canvas class="draw-canvas" id="canvas_${n}" width="800" height="400" style="height:220px;"></canvas>
+    <div class="draw-tools" id="tools_${n}">
+      <div class="color-btn active-color" style="background:#3B82F6;" onclick="setColor('#3B82F6',this)"></div>
+      <div class="color-btn" style="background:#EF4444;" onclick="setColor('#EF4444',this)"></div>
+      <div class="color-btn" style="background:#22C55E;" onclick="setColor('#22C55E',this)"></div>
+      <div class="color-btn" style="background:#F59E0B;" onclick="setColor('#F59E0B',this)"></div>
+      <div class="color-btn" style="background:#EC4899;" onclick="setColor('#EC4899',this)"></div>
+      <div class="color-btn" style="background:#8B5CF6;" onclick="setColor('#8B5CF6',this)"></div>
+      <div class="color-btn" style="background:#1E293B;" onclick="setColor('#1E293B',this)"></div>
+      <div class="color-btn" style="background:#fff;border:2px solid #ccc;" onclick="setColor('#fff',this)"></div>
+      <button class="draw-tool-btn" onclick="clearCanvas(${n})">🗑️ Очистить</button>
     </div>
-    <div class="draw-steps">
-      <span class="draw-step">🖊️ Qalam kerak</span>
-      <span class="draw-step">🎨 Bo'yoq kerak</span>
-      <span class="draw-step">📄 Qog'oz kerak</span>
+    <div class="task-item ${izoDone?'done-task':''}" id="ti_izo_${n}">
+      <div class="task-cb ${izoDone?'done':''}" onclick="toggleIzo(${n},this)">
+        ${izoDone?'✓':''}
+      </div>
+      <div class="task-body"><div class="task-q">Нарисовал(а) — ставлю галочку!</div></div>
     </div>
-    <ul class="task-list" style="margin-top:12px">
-      <li class="task-item"><div class="task-check" id="at${day}_0" onclick="toggleTask(this)"></div><span>Qalam bilan eskiz chiz</span></li>
-      <li class="task-item"><div class="task-check" id="at${day}_1" onclick="toggleTask(this)"></div><span>Konturlarni qayta chiz</span></li>
-      <li class="task-item"><div class="task-check" id="at${day}_2" onclick="toggleTask(this)"></div><span>Rang bilan bo'ya</span></li>
-      <li class="task-item"><div class="task-check" id="at${day}_3" onclick="toggleTask(this)"></div><span>Rasmni singilga ko'rsat</span></li>
-    </ul>`;
-
-  buildCalendar();
-}
-
-function renderCurrentExample() {
-  if (currentExIdx >= currentExamples.length) {
-    document.getElementById('mathExamplesContent').innerHTML = `
-      <div style="text-align:center;padding:20px;color:var(--green);font-weight:800;font-size:1.1rem">
-        🎉 Barcha misollar yechildi! Ajoyib!
-      </div>`;
-    document.getElementById('mathAnswerInput').style.display = 'none';
-    document.querySelector('.check-btn').style.display = 'none';
-    return;
-  }
-  const ex = currentExamples[currentExIdx];
-  let html = `<div class="sec-title">Misol ${currentExIdx + 1}/${currentExamples.length}</div>`;
-  html += `<div style="text-align:center;font-family:'Baloo 2',cursive;font-size:2rem;font-weight:800;color:#D97706;padding:16px;background:#FFFDE7;border-radius:14px;border:3px solid #FDE68A">${ex.q}</div>`;
-  document.getElementById('mathExamplesContent').innerHTML = html;
-  document.getElementById('mathAnswerInput').value = '';
-  document.getElementById('mathFeedback').textContent = '';
-  document.getElementById('mathAnswerInput').style.display = '';
-  const cb = document.querySelector('.check-btn');
-  if(cb) cb.style.display = '';
-}
-
-function checkMathAnswer() {
-  const val = parseInt(document.getElementById('mathAnswerInput').value);
-  if (isNaN(val)) { document.getElementById('mathFeedback').textContent = '❓ Raqam yoz!'; return; }
-  const correct = currentExamples[currentExIdx].a;
-  const fb = document.getElementById('mathFeedback');
-  if (val === correct) {
-    fb.className = 'feedback correct';
-    fb.textContent = '✅ To\'g\'ri! Barakalla! ⭐';
-    solvedCount++;
-    totalStars++;
-    document.getElementById('todayStars').textContent = parseInt(document.getElementById('todayStars').textContent) + 1;
-    document.getElementById('mathDone').textContent = `${solvedCount}/${currentExamples.length}`;
-    saveState(); updateHeader();
-    setTimeout(() => { currentExIdx++; renderCurrentExample(); }, 800);
-  } else {
-    fb.className = 'feedback wrong';
-    fb.textContent = `❌ Xato! To'g'risi: ${correct}. Qayta urinib ko'r!`;
-    setTimeout(() => { fb.textContent = ''; }, 2000);
-  }
-}
-
-document.addEventListener('keydown', e => {
-  if (e.key === 'Enter') checkMathAnswer();
-});
-
-function completeDay() {
-  if (!completedDays.includes(currentDay)) {
-    completedDays.push(currentDay);
-    totalStars += 4;
-    saveState();
-  }
-  document.getElementById('congratsBanner').className = 'congrats-banner show';
-  document.getElementById('completeBtn').textContent = '✅ Bajarildi';
-  document.getElementById('completeBtn').className = 'day-complete-btn done';
-  document.getElementById('todayStars').textContent = '4';
-  updateHeader();
-  buildCalendar();
-}
-
-function changeDay(dir) {
-  const nd = currentDay + dir;
-  if (nd < 1 || nd > 30) return;
-  loadDay(nd);
-  // reset inner tabs
-  ['math','rus','eng'].forEach(s => {
-    const first = document.querySelector(`.${s}-tab`);
-    if (first) { switchInner(s, first.dataset.panel || 'explain'); }
-  });
-}
-
-function toggleSubject(bodyId, chevId) {
-  const body = document.getElementById(bodyId);
-  const chev = document.getElementById(chevId);
-  body.classList.toggle('open');
-  chev.classList.toggle('open');
-}
-
-function toggleTask(el) {
-  el.classList.toggle('done');
-  el.textContent = el.classList.contains('done') ? '✓' : '';
-  const done = document.querySelectorAll('.task-check.done').length;
-  document.getElementById('tasksDone').textContent = done;
-}
-
-function switchInner(subj, panel) {
-  // hide all panels for this subject
-  document.querySelectorAll(`#${subj}-explain, #${subj}-examples, #${subj}-tasks, #${subj}-exercise, #${subj}-read, #${subj}-words, #${subj}-grammar, #${subj}-task`).forEach(p => {
-    p.classList.remove('active-panel');
-  });
-  const target = document.getElementById(`${subj}-${panel}`);
-  if (target) target.classList.add('active-panel');
-  // tabs
-  document.querySelectorAll(`.${subj}-tab`).forEach(t => t.classList.remove('active-tab'));
-  event.target.classList.add('active-tab');
-}
-
-function showSection(id) {
-  ['today','calendar','math','russian','english','art'].forEach(s => {
-    document.getElementById('section-'+s).style.display = s === id ? '' : 'none';
-  });
-  document.querySelectorAll('.nav-btn').forEach((b,i) => b.classList.remove('active'));
-  event.target.classList.add('active');
-}
-
-function buildCalendar() {
-  const grid = document.getElementById('calendarGrid');
-  let html = '';
-  for (let i = 1; i <= 30; i++) {
-    const cls = completedDays.includes(i) ? 'cal-day done-day' : (i === currentDay ? 'cal-day current-day' : 'cal-day');
-    html += `<div class="${cls}" onclick="loadDay(${i});showSectionByName('today')">${i}</div>`;
-  }
-  grid.innerHTML = html;
-  // Schedule
-  let sch = '';
-  curriculum.forEach((c, i) => {
-    sch += `<div style="padding:4px 0;border-bottom:1px dashed #E5E7EB">
-      <b style="color:var(--primary)">${i+1}-kun:</b> 
-      🔢 ${c[0]} | 📖 ${c[1]} | 🇬🇧 ${c[2]} | 🎨 ${c[3]}
-    </div>`;
-  });
-  document.getElementById('scheduleList').innerHTML = sch;
-}
-
-function showSectionByName(name) {
-  ['today','calendar','math','russian','english','art'].forEach(s => {
-    document.getElementById('section-'+s).style.display = s === name ? '' : 'none';
-  });
-  document.querySelectorAll('.nav-btn').forEach(b => b.classList.remove('active'));
-  document.querySelector('.nav-btn').classList.add('active');
-}
-
-function buildStaticSections() {
-  // Multiplication tables
-  let tHtml = '';
-  [2,3,4,5].forEach(n => {
-    tHtml += `<div style="font-weight:800;color:#D97706;font-size:0.9rem;margin:10px 0 6px">×${n} jadvali</div>`;
-    tHtml += '<div class="examples-grid">';
-    for(let i=1;i<=10;i++) {
-      tHtml += `<div class="example-box" style="font-size:0.95rem">${n}×${i}=${n*i}</div>`;
-    }
-    tHtml += '</div>';
-  });
-  document.getElementById('multiTable').innerHTML = tHtml;
-
-  // Add/sub examples
-  let asHtml = '<div class="examples-grid">';
-  const pairs = [[12,8],[25,15],[40,17],[63,27],[18,9],[45,23],[71,34],[88,46],[34,16],[55,28]];
-  pairs.forEach(([a,b]) => {
-    asHtml += `<div class="example-box" style="font-size:0.95rem">${a}+${b}=${a+b}</div>`;
-    asHtml += `<div class="example-box" style="font-size:0.95rem">${a+b}-${b}=${a}</div>`;
-  });
-  asHtml += '</div>';
-  document.getElementById('addSubExamples').innerHTML = asHtml;
-
-  // Word problems
-  const wps = [
-    "Savat ichida 5 ta olma va 7 ta nok bor. Hammasi nechta meva? (5+7=12)",
-    "Shukronada 20 ta qalam bor edi. U 6 tasini do'stiga berdi. Nechta qoldi? (20-6=14)",
-    "Har qutida 4 ta konfet bor. 3 ta quti bo'lsa, jami nechta konfet? (4×3=12)",
-    "Sinfda 30 o'quvchi bor. 5 ta guruhga bo'lindi. Har guruhda nechta? (30÷5=6)",
-  ];
-  document.getElementById('wordProblems').innerHTML = wps.map(p =>
-    `<div class="lesson-explain" style="margin-bottom:8px">📝 ${p}</div>`).join('');
-
-  // Russian rules
-  const rules = [
-    ["Большая буква", "Имена, фамилии, города, страны — всегда с большой буквы!\nШукрона Бакирова, Москва, Кыргызстан, Россия"],
-    ["Знаки препинания", ". — конец обычного предложения\n! — восклицание: Какой красивый!\n? — вопрос: Как тебя зовут?"],
-    ["Гласные и согласные", "Гласные: А О У Э И Ы Я Ё Ю Е (10 букв)\nСогласные: все остальные буквы"],
-    ["Перенос слов", "Переносим по слогам: МА-МА, ШКО-ЛА\nНельзя оставлять 1 букву: ЯБЛОКО = ЯБ-ЛО-КО"],
-    ["Мягкий знак (ь)", "После согласной, смягчает: конь, день, ель\nНа конце слова: мать, дочь, ночь"],
-  ];
-  document.getElementById('rulesContent').innerHTML = rules.map(([t,b]) =>
-    `<div class="lesson-block rus-block" style="margin-bottom:10px">
-      <div class="lesson-title">📌 ${t}</div>
-      <div class="lesson-explain">${b.replace(/\n/g,'<br>')}</div>
-    </div>`).join('');
-
-  // English full
-  let efHtml = '';
-  const topics = [
-    {t:"Salomlashish 👋", items:["Hello! — Salom!","Good morning! — Xayrli tong!","Good afternoon! — Xayrli kun!","Goodbye! — Xayr!","My name is Shukrona. — Mening ismim Shukrona.","How are you? — Qalaysiz?","I am fine. — Yaxshiman."]},
-    {t:"Raqamlar 🔢", items:["one-1, two-2, three-3, four-4, five-5","six-6, seven-7, eight-8, nine-9, ten-10","eleven-11, twelve-12, thirteen-13","fourteen-14, fifteen-15, twenty-20","thirty-30, forty-40, fifty-50, hundred-100"]},
-    {t:"Ranglar 🎨", items:["red — qizil 🔴","blue — ko'k 🔵","green — yashil 🟢","yellow — sariq 🟡","black — qora ⚫","white — oq ⚪","orange — to'q sariq 🟠","pink — pushti 🩷"]},
-    {t:"Hayvonlar 🐾", items:["dog — it 🐶","cat — mushuk 🐱","bird — qush 🐦","fish — baliq 🐟","horse — ot 🐴","lion — sher 🦁","elephant — fil 🐘","rabbit — quyon 🐰"]},
-    {t:"Oila 👨‍👩‍👧", items:["mother — ona","father — ota","sister — opa/singil","brother — aka/uka","grandmother — buvi","grandfather — bobo","I love my family — Men oilamni sevaman"]},
-  ];
-  topics.forEach(tp => {
-    efHtml += `<div class="lesson-block eng-block" style="margin-bottom:12px">
-      <div class="lesson-title">📌 ${tp.t}</div>
-      <div class="word-row">${tp.items.map(i=>`<span class="word-chip">${i}</span>`).join('')}</div>
-    </div>`;
-  });
-  document.getElementById('engFullContent').innerHTML = efHtml;
-
-  // Art full
-  let afHtml = '';
-  artLessons.forEach((al, i) => {
-    afHtml += `<div class="draw-instructions" style="margin-bottom:12px">
-      <h4>${al.title}</h4>
-      <ol>${al.steps.map(s=>`<li>${s}</li>`).join('')}</ol>
-    </div>`;
-  });
-  afHtml += `<div class="draw-instructions">
-    <h4>🎨 Rangtasvirning asoslari</h4>
-    <ol>
-      <li>Avval qalam bilan eskiz chiz</li>
-      <li>Xatolarni o'chirg'ich bilan o'chir</li>
-      <li>Konturlarni qalin chiz</li>
-      <li>Asosiy rangdan boshlang, keyin tafsilotlar</li>
-      <li>Soyani kul rang bilan ko'rsat</li>
-      <li>Rasm tugagach — ismingizni yoz!</li>
-    </ol>
   </div>`;
-  document.getElementById('artFullContent').innerHTML = afHtml;
+  html+=`</div>`;
+
+  body.innerHTML=html;
+  // init canvas
+  setTimeout(()=>initCanvas(n),100);
 }
+
+function switchTab(tab, n){
+  currentTab=tab;
+  renderSheetContent(n);
+  document.getElementById('shBody').scrollTop=0;
+}
+
+// ========== MATH CHECK ==========
+function checkMath(n,i,answer){
+  const inp=document.getElementById(`mi_${n}_${i}`);
+  const card=document.getElementById(`mc_${n}_${i}`);
+  const chk=document.getElementById(`mch_${n}_${i}`);
+  const val=parseInt(inp.value);
+  if(isNaN(val)) return;
+  if(val===answer){
+    card.classList.add('solved');
+    chk.className='math-check ok';
+    chk.style.display='block';
+    chk.textContent='✅ Правильно!';
+    inp.disabled=true;
+    localStorage.setItem(`math_${n}_${i}`,'1');
+    S.mathSolved++;
+    S.stars++;
+    save();
+    updateStats();
+    showStars();
+    toast('🌟 Правильно!');
+  } else {
+    chk.className='math-check no';
+    chk.style.display='block';
+    chk.textContent='❌ Попробуй ещё! Ответ не '+val;
+    inp.style.borderColor='var(--red)';
+    setTimeout(()=>{inp.style.borderColor='';chk.style.display='none';},1500);
+  }
+}
+
+// ========== TASK TOGGLE ==========
+function toggleTask(subject, n, i, el){
+  const key=`${subject}_${n}_${i}`;
+  const isDone=localStorage.getItem(key)==='1';
+  const newState=!isDone;
+  localStorage.setItem(key, newState?'1':'0');
+  const item=document.getElementById(`ti_${subject}_${n}_${i}`);
+  if(newState){
+    el.classList.add('done'); el.textContent='✓';
+    item.classList.add('done-task');
+    if(subject==='eng'){S.wordsDone++; S.stars++; save(); updateStats(); showStars();}
+    toast('✅ Задание выполнено!');
+  } else {
+    el.classList.remove('done'); el.textContent='';
+    item.classList.remove('done-task');
+  }
+}
+
+function toggleIzo(n, el){
+  const key=`izo_${n}`;
+  const isDone=localStorage.getItem(key)==='1';
+  const newState=!isDone;
+  localStorage.setItem(key, newState?'1':'0');
+  const item=document.getElementById(`ti_izo_${n}`);
+  if(newState){
+    el.classList.add('done'); el.textContent='✓';
+    item.classList.add('done-task');
+    S.stars+=2; save(); updateStats(); showStars();
+    toast('🎨 Рисунок засчитан!');
+  } else {
+    el.classList.remove('done'); el.textContent='';
+    item.classList.remove('done-task');
+  }
+}
+
+// ========== CANVAS ==========
+function initCanvas(n){
+  const canvas=document.getElementById(`canvas_${n}`);
+  if(!canvas) return;
+  drawCtx=canvas.getContext('2d');
+  canvas.addEventListener('mousedown',startDraw);
+  canvas.addEventListener('mousemove',draw);
+  canvas.addEventListener('mouseup',()=>drawing=false);
+  canvas.addEventListener('touchstart',e=>{e.preventDefault();const t=e.touches[0];const r=canvas.getBoundingClientRect();drawCtx.beginPath();drawCtx.moveTo(t.clientX-r.left,t.clientY-r.top);drawing=true;},{passive:false});
+  canvas.addEventListener('touchmove',e=>{e.preventDefault();if(!drawing)return;const t=e.touches[0];const r=canvas.getBoundingClientRect();drawCtx.lineTo(t.clientX-r.left,t.clientY-r.top);drawCtx.strokeStyle=currentColor;drawCtx.lineWidth=currentSize;drawCtx.lineCap='round';drawCtx.stroke();},{passive:false});
+  canvas.addEventListener('touchend',()=>drawing=false);
+}
+function startDraw(e){
+  drawing=true;
+  const r=e.target.getBoundingClientRect();
+  drawCtx.beginPath();
+  drawCtx.moveTo(e.clientX-r.left,e.clientY-r.top);
+}
+function draw(e){
+  if(!drawing||!drawCtx)return;
+  const r=e.target.getBoundingClientRect();
+  drawCtx.lineTo(e.clientX-r.left,e.clientY-r.top);
+  drawCtx.strokeStyle=currentColor;
+  drawCtx.lineWidth=currentSize;
+  drawCtx.lineCap='round';
+  drawCtx.stroke();
+}
+function setColor(c,el){
+  currentColor=c;
+  document.querySelectorAll('.color-btn').forEach(b=>b.classList.remove('active-color'));
+  el.classList.add('active-color');
+  currentSize = c==='#fff'?20:4;
+}
+function clearCanvas(n){
+  const canvas=document.getElementById(`canvas_${n}`);
+  if(canvas&&drawCtx){drawCtx.clearRect(0,0,canvas.width,canvas.height);}
+}
+
+// ========== COMPLETE ==========
+function completeDay(){
+  if(!openDay) return;
+  if(S.done.includes(openDay)){toast('Этот день уже выполнен! ✅');return;}
+  S.done.push(openDay);
+  if(openDay===S.day && S.day<30) S.day++;
+  S.stars+=5;
+  save();
+  renderGrid();
+  updateStats();
+  const btn=document.getElementById('compBtn');
+  btn.textContent='✅ Этот день уже выполнен!';
+  btn.className='comp-btn done-st';
+  toast('🌟 Молодец, Шукрона! День '+openDay+' выполнен!');
+  showStars();
+  setTimeout(closeModal,900);
+}
+
+// ========== UI HELPERS ==========
+function toast(msg){
+  const t=document.getElementById('toast');
+  t.textContent=msg;t.style.display='block';
+  clearTimeout(t._t);
+  t._t=setTimeout(()=>t.style.display='none',2500);
+}
+function showStars(){
+  const el=document.getElementById('starPop');
+  el.style.display='block';
+  setTimeout(()=>el.style.display='none',900);
+}
+
+// AUTO-START if already started
+if(localStorage.getItem('shStarted')==='1'){
+  document.getElementById('splash').style.display='none';
+  document.getElementById('appHeader').style.display='block';
+  document.getElementById('appMain').style.display='block';
+  renderGrid();updateStats();
+}
+document.querySelector('.sp-btn').addEventListener('click',()=>{
+  localStorage.setItem('shStarted','1');
+  startApp();
+});
 </script>
 </body>
 </html>
